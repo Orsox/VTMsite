@@ -108,7 +108,7 @@ app.controller("CharCreatorController",
    this.maxFreePts = 22;
    this.maxFlawBonus = 7;
 
-   this.natureDemeanorList = ["Architect", "Autocrat", "Bon Vivant",
+   this.natureDemeanorList = ["Architekt", "Autokrat", "Bon Vivant",
                               "Bravo", "Capitalist", "Caregiver",
                               "Celebrant", "Chameleon", "Child",
                               "Competitor", "Conformist", "Conniver",
