@@ -22,7 +22,7 @@ app.service("ClanService", function(){
       disciplines: ["Tierhaftigkeit", "Seelenstärke", "Gestaltwandel"]
     },
     {
-      id: 2, name: "Assamite",
+      id: 2, name: "Assamiten",
       filters: ["Die Dreizehn", "Die Unabhängigen", "Alle Clans",
         "Niedere Clans", "Dunkles Zeitalter"
       ],
@@ -49,7 +49,7 @@ app.service("ClanService", function(){
       filters: ["Alle Clans", "Dunkles Zeitalter"],
       disciplines: []
     }, {
-      id: 7, name: "Cappadocian",
+      id: 7, name: "Cappadocianer",
       filters: ["Alle Clans", "Dunkles Zeitalter", "Hohe Clans"],
       disciplines: ["Auspex", "Seelenstärke", "Nekromantie"]
     },
@@ -64,13 +64,13 @@ app.service("ClanService", function(){
       disciplines: ["Seelenstärke", "Melpominee", "Präsenz"]
     },
     {
-      id: 10, name: "Followers of Set",
+      id: 10, name: "Jünger des Set",
       filters: ["Die Dreizehn", "Die Unabhängigen", "Alle Clans", "Dunkles Zeitalter",
                 "Niedere Clans"],
       disciplines: ["Verdunkelung", "Präsenz", "Serpentis"]
     },
     {
-      id: 11, name: "Gargoyles",
+      id: 11, name: "Gargylen",
       filters: ["Alle Blutlinien"],
       disciplines: ["Flight", "Seelenstärke", "Stärke", "Visceratika"]
     },
@@ -112,7 +112,7 @@ app.service("ClanService", function(){
       disciplines: ["Tierhaftigkeit", "Ogham", "Präsenz"]
     },
     {
-      id: 19, name: "Malkavian",
+      id: 19, name: "Malkavianer",
       filters: ["Die Dreizehn", "Camarilla", "Alle Clans",
                 "Camarilla (angehörige Clans)", "Dunkles Zeitalter", "Niedere Clans"],
       disciplines: ["Auspex", "Irrsinn", "Verdunkelung"]
@@ -134,7 +134,7 @@ app.service("ClanService", function(){
       disciplines: ["Tierhaftigkeit", "Verdunkelung", "Stärke"]
     },
     {
-      id: 23, name: "Old Clan Tzimisce",
+      id: 23, name: "Alter Clan Tzimisce",
       filters: ["Dunkles Zeitalter, Hohe Clans"],
       disciplines: ["Tierhaftigkeit", "Auspex", "Beherrschung"]
     },
@@ -167,7 +167,7 @@ app.service("ClanService", function(){
       disciplines: ["Auspex", "Beherrschung", "Thaumaturgie"]
     },
     {
-      id: 29, name: "True Brujah",
+      id: 29, name: "Wahre Brujah",
       filters: ["Alle Blutlinien", "Die Unabhängigen", "Dunkles Zeitalter"],
       disciplines: ["Stärke", "Präsenz", "Temporis"]
     },
