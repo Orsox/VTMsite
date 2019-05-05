@@ -15,7 +15,7 @@ app.service("DisciplineService", ['ClanService', 'CharCreatorService', 'UglyServ
 
   this.disciplineList = ["Tierhaftigkeit", "Auspex", "Bardo", "Geschwindigkeit",
                          "Schimären", "Daimonion", "Irrsinn",
-                         "Beherrschung", "Flight", "Seelenstärke", "Koldunic Sorcery",
+                         "Beherrschung", "Fliegen", "Seelenstärke", "Koldunic Sorcery",
                          "Melpominee", "Mytherceria", "Nekromantie", "Obeah",
                          "Verdunkelung", "Schattenspiele", "Ogham", "Stärke",
                          "Präsenz", "Gestaltwandel", "Quietus", "Sanguinus",
