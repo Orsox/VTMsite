@@ -3,12 +3,12 @@
   <div class="col-lg-12 col-md-12 col-sm-12">
       <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-3">
-          <label termindex term="Spieler" for="charPlayer" style="margin-right: 3px;">Player: </label>
+          <label termindex term="Player" for="charPlayer" style="margin-right: 3px;">Spieler: </label>
           <input id="charPlayer" ng-model="creatorCtrl.charPlayer"
                  ng-blur="creatorCtrl.setPlayer(creatorCtrl.charPlayer)"/> <!--TODO: Remove the ng-blurs, Replace them with-->
         </div>                                                                   <!--a function in the service when saving.-->
         <div class="col-lg-3 col-md-3 col-sm-3">
-          <label termindex term="Chronik" for="charChronicle" style="margin-right: 3px;">Chronicle: </label>
+          <label termindex term="Chronicle" for="charChronicle" style="margin-right: 3px;">Chronik: </label>
           <input id="charChronicle" ng-model="creatorCtrl.charChronicle" ng-blur="creatorCtrl.setChronicle(creatorCtrl.charChronicle)"/>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3">
@@ -16,25 +16,25 @@
           <input id="charName" ng-model="creatorCtrl.charName" ng-blur="creatorCtrl.setName(creatorCtrl.charName)"/>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3">
-          <label termindex term="Konzept" for="charConcept">Concept: </label>
+          <label termindex term="Concept" for="charConcept">Konzept: </label>
           <input id="charConcept" ng-model="creatorCtrl.charConcept" ng-blur="creatorCtrl.setConcept(creatorCtrl.charConcept)"/>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-3">
-          <label termindex term="Wesen" for="charNature">Nature: </label>
+          <label termindex term="Wesen" for="charNature">Wesen: </label>
           <input id="charNature" ng-model="creatorCtrl.charNature" ng-blur="creatorCtrl.setNature(creatorCtrl.charNature)"/>
           <select id="charNatSelect" ng-model="creatorCtrl.charNature" ng-options="charNat for charNat in creatorCtrl.natureDemeanorList"
                   ng-blur="creatorCtrl.setNature(creatorCtrl.charNature)" style="width:20px; height:26px; position:absolute;"></select>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3">
-          <label termindex term="Verhalten" for="charDemeanor">Demeanor: </label>
+          <label termindex term="Verhalten" for="charDemeanor">Verhalten: </label>
           <input id="charDemeanor" ng-model="creatorCtrl.charDemeanor" ng-blur="creatorCtrl.setDemeanor(creatorCtrl.charDemeanor)"/>
           <select id="charDemSelect" ng-model="creatorCtrl.charDemeanor" ng-options="charDem for charDem in creatorCtrl.natureDemeanorList"
                   ng-blur="creatorCtrl.setDemeanor(creatorCtrl.charDemeanor)" style="max-width:20px; height:26px; position: absolute;"></select>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3">
-          <label termindex term="Sire" for="charSire" style="margin-right: 12px;">Sire: </label>
+          <label termindex term="Sire" for="charSire" style="margin-right: 12px;">Erschaffer: </label>
           <input id="charSire" ng-model="creatorCtrl.charSire" ng-blur="creatorCtrl.setSire(creatorCtrl.charSire)"/>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3">
