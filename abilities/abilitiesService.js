@@ -86,24 +86,24 @@ app.service("AbilitiesService",
    };
    this.alertness = new Ability("Aufmerksamkeit");
    this.abilitiesList.alertness = this.alertness;
-   this.athletics = new Ability("Sportlichkeit");
-   this.abilitiesList.athletics = this.athletics;
-   this.awareness = new Ability("Magiegespür");
-   this.abilitiesList.awareness = this.awareness;
-   this.brawl = new Ability("Handgemenge");
-   this.abilitiesList.brawl = this.brawl;
-   this.empathy = new Ability("Empathie");
-   this.abilitiesList.empathy = this.empathy;
    this.expression = new Ability("Ausdruck");
    this.abilitiesList.expression = this.expression;
+   this.subterfuge = new Ability("Ausflüchte");
+   this.abilitiesList.subterfuge = this.subterfuge;
    this.intimidation = new Ability("Einschüchtern");
    this.abilitiesList.intimidation = this.intimidation;
+   this.empathy = new Ability("Empathie");
+   this.abilitiesList.empathy = this.empathy;
    this.leadership = new Ability("Führungsqualitäten");
    this.abilitiesList.leadership = this.leadership;
+   this.brawl = new Ability("Handgemenge");
+   this.abilitiesList.brawl = this.brawl;
+   this.awareness = new Ability("Magiegespür");
+   this.abilitiesList.awareness = this.awareness; 
+   this.athletics = new Ability("Sportlichkeit");
+   this.abilitiesList.athletics = this.athletics;       
    this.streetwise = new Ability("Szenekenntnis");
-   this.abilitiesList.streetwise = this.streetwise;
-   this.subterfuge = new Ability("Tierkunde");
-   this.abilitiesList.subterfuge = this.subterfuge;
+   this.abilitiesList.streetwise = this.streetwise;   
    this.customtalent = new Ability('', 'Hobbytalent');
    this.abilitiesList.customtalent = this.customtalent;
    this.animalken = new Ability("Tierkunde");
@@ -156,25 +156,26 @@ app.service("AbilitiesService",
        id: 0, category: "Talente", priority: null,
        abilities:
        [
-         this.alertness, this.athletics, this.awareness, this.brawl,
-         this.empathy, this.expression, this.intimidation, this.leadership,
-         this.streetwise, this.subterfuge, this.customtalent
+         this.alertness, this.expression, this.subterfuge, this.intimidation,
+         this.empathy, this.leadership, this.brawl,
+         this.awareness, this.athletics, 
+         this.streetwise, this.customtalent
        ]
     },
     {
       id: 1, category: "Fertigkeiten", priority: null,
       abilities: [
-        this.animalken, this.crafts, this.drive, this.etiquette, this.firearms,
-        this.larceny, this.melee, this.performance, this.stealth, this.survival, this.customskill
+        this.larceny, this.etiquette, this.drive, this.crafts, this.stealth, this.melee,
+        this.firearms, this.animalken, this.survival, this.performance, this.customskill
       ]
     },
     {
       id: 2, category: "Kenntnisse", priority: null,
       abilities:
       [
-        this.academics, this.computer, this.finance, this.investigation,
-        this.law, this.medicine, this.occult, this.politics, this.science,
-        this.technology, this.customknowledge
+        this.academics, this.computer, this.finance, this.law,
+        this.medicine, this.investigation, this.science, this.occult,
+        this.politics, this.technology, this.customknowledge
       ]
     }];
 
