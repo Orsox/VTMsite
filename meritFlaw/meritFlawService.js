@@ -20,17 +20,19 @@ app.service("MeritFlawService", ['CharCreatorService',
 
  this.physicalMeritList = {"": 0, "Geschärfte Sinne (1pt)": 1, "Beidhändig (1pt)": 1, "Schläger (1pt)": 1, "Katzenhaftes Gleichgewicht (1pt)": 1,
                            "Frühaufsteher (1pt)": 1, "Essen (1pt)": 1, "Freundliches Gesicht (1pt)": 1, "Rosiger Teint (2pt)": 2,
-                           "Bezauberne Stimme (2pt)": 2, "Daredevil (3pt)": 3, "Wirksame Verdauung (3pt)": 3, "Riesenwuchs (4pt)": 4};
+                           "Bezauberne Stimme (2pt)": 2, "Draufgänger (3pt)": 3, "Wirksame Verdauung (3pt)": 3, "Riesenwuchs (4pt)": 4};
 
- this.physicalFlawList = {"": 0, "Hard of Hearing (1pt)": 1, "Short (1pt)": 1, "Smell of the Grave (1pt)": 1,
-                          "Tic/Twitch (1pt)": 1, "Bad Sight (1pt)": 1, "Bad Sight (3pt)": 3, "Fourteenth Generation (2pt)": 2,
-                          "Fifteenth Generation (4pt)": 4, "Disfigured (2pt)": 2, "Dulled Bite (2pt)": 2, "Infectious Bite (2pt)": 2,
-                          "One Eye (2pt)":2, "Vulnerability to Silver (2pt)": 2, "Open Wound (2pt)": 2, "Open Wound (4pt)": 4,
-                          "Addiction (3pt)": 3, "Child (3pt)": 3, "Deformity (3pt)": 3, "Glowing Eyes (3pt)": 3,
-                          "Lame (3pt)": 3, "Lazy (3pt)": 3, "Monstrous (3pt)": 3, "Permanent Fangs (3pt)": 3,
-                          "Permanent Wound (3pt)": 3, "Slow Healing (3pt)": 3, "Disease Carrier (4pt)": 4, "Deaf (4pt)": 4,
-                          "Mute (4pt)": 4, "Thin Blood (4pt)": 4, "Flesh of the Corpse (5pt)": 5, "Infertile Vitae (5pt)": 5,
-                          "Blind (6pt)": 6};
+ this.physicalFlawList = {"": 0, "Schwerhörigkeit (1pt)": 1, "Klein (1pt)": 1, "Grabgeruch (1pt)": 1,
+                          "Tic/Zucken (1pt)": 1, "Schlechtes Sehvermögen (1pt)": 1, "Schlechtes Sehvermögen (2pt)": 2,
+                          "Schlechtes Sehvermögen (3pt)": 3, "Vierzehnte Generation (2pt)": 2,
+                          "Fünfzehnte Generation (4pt)": 4, "Entstellt (2pt)": 2, "Stumpfer Biss (2pt)": 2, "Infektiöser Biss (2pt)": 2,
+                          "Einäugigkeit (2pt)":2, "Anfällig gegen Siber (2pt)": 2, "Offene Wunde (2pt)": 2,"Offene Wunde (3pt)": 3,
+                           "Offene Wunde (4pt)": 4,
+                          "Sucht (3pt)": 3, "Kind (3pt)": 3, "Missbildung (3pt)": 3, "Glühende Augen (3pt)": 3,
+                          "Lähmung (3pt)": 3, "Faul (3pt)": 3, "Monstrosität (3pt)": 3, "Dauerhafte Fangzähne (3pt)": 3,
+                          "Dauerhafte Wunde (3pt)": 3, "Langsame Heilung (3pt)": 3, "Krankheitsüberträger (4pt)": 4, "Taubheit (4pt)": 4,
+                          "Stummheit (4pt)": 4, "Anämie (4pt)": 4, "Leichenfleisch (5pt)": 5, "Unfruchtbare Vitae (5pt)": 5,
+                          "Blindheit (6pt)": 6};
 
  this.mentalMeritList = {"": 0, "Coldly Logical (1pt)": 1, "Common Sense (1pt)": 1, "Concentration (1pt)": 1,
                          "Introspection (1pt)": 1, "Language (1pt)": 1, "Time Sense (1pt)": 1, "Useful Knowledge (1pt)": 1,
