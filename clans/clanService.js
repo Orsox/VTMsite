@@ -12,7 +12,7 @@ app.service("ClanService", function(){
   ];
 
   this.clanList = [{
-      id: 0, name: "Ahrimanes",
+      id: 0, name: "Ahrimanen",
       filters: ["Sabbat", "Alle Blutlinien", "Dunkles Zeitalter"],
       disciplines: ["Tierhaftigkeit", "Stärke", "Spiritus"]
     },
@@ -34,7 +34,7 @@ app.service("ClanService", function(){
       disciplines: ["Daimonion", "Verdunkelung", "Präsenz"]
     },
     {
-      id: 4, name: "Blood Brothers",
+      id: 4, name: "Blutsbrüder",
       filters: ["Sabbat", "Alle Blutlinien"],
       disciplines: ["Seelenstärke", "Stärke", "Sanguinus"]
     },
@@ -49,17 +49,17 @@ app.service("ClanService", function(){
       filters: ["Alle Clans", "Dunkles Zeitalter"],
       disciplines: []
     }, {
-      id: 7, name: "Cappadocianer",
+      id: 7, name: "Kappadozianer",
       filters: ["Alle Clans", "Dunkles Zeitalter", "Hohe Clans"],
       disciplines: ["Auspex", "Seelenstärke", "Nekromantie"]
     },
     {
-      id: 8, name: "Children of Osiris",
+      id: 8, name: "Kinder des Osiris",
       filters: ["Alle Blutlinien", "Dunkles Zeitalter"],
-      disciplines: ["Bardo", "2 other disciplines learned from original clan"]
+      disciplines: ["Bardo", "2 andere Disziplinen des original Clans"]
     },
     {
-      id: 9, name: "Daughters of Cacophony",
+      id: 9, name: "DTöchter der  KaKophonie",
       filters: ["Alle Blutlinien"],
       disciplines: ["Seelenstärke", "Melpominee", "Präsenz"]
     },
@@ -72,7 +72,7 @@ app.service("ClanService", function(){
     {
       id: 11, name: "Gargylen",
       filters: ["Alle Blutlinien"],
-      disciplines: ["Flight", "Seelenstärke", "Stärke", "Visceratika"]
+      disciplines: ["Fliegen", "Seelenstärke", "Stärke", "Visceratika"]
     },
     {
       id: 12, name: "Gangrel",
@@ -86,7 +86,7 @@ app.service("ClanService", function(){
       disciplines: ["Beherrschung", "Nekromantie", "Stärke"]
     },
     {
-      id: 14, name: "Harbingers of Skulls",
+      id: 14, name: "Sendboten des Todes",
       filters: ["Sabbat", "Alle Blutlinien"],
       disciplines: ["Auspex", "Seelenstärke", "Nekromantie"]
     },
@@ -96,7 +96,7 @@ app.service("ClanService", function(){
       disciplines: ["Beherrschung", "Schattenspiele", "Mytherceria"]
     },
     {
-      id: 16, name: "Lamia",
+      id: 16, name: "Lamien",
       filters: ["Alle Blutlinien", "Dunkles Zeitalter"],
       disciplines: ["Seelenstärke", "Nekromantie", "Stärke"]
     },
@@ -123,7 +123,7 @@ app.service("ClanService", function(){
       disciplines: ["Auspex", "Beherrschung", "Nekromantie"]
     },
     {
-      id: 21, name: "Noiad",
+      id: 21, name: "Noiaden",
       filters: ["Alle Blutlinien", "Dunkles Zeitalter"],
       disciplines: ["Tierhaftigkeit", "Auspex", "Gestaltwandel"]
     },

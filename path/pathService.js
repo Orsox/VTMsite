@@ -4,12 +4,13 @@ app.service("PathService",
  ['CharCreatorService',
  function(CharCreatorService){
 
-   this.pathList = ["Menschlichkeit", "Pfad des Grabes", "Pfad der Asche", "Pfad der Gebeine",
-                    "Pfad des Nachrufs", "Pfad des Leichnams", "Pfad des Verfalls", "Pfad der vier Säfte",
-                    "Gläserne Pfad", "Pfad des Blutes", "Elementarherrschaft", "Der Grüne Pfad",
-                    "Hände der Vernichtung", "Lockruf der Flammen", "Neptuns Macht", "Bewegung durch den Geist",
-                    "Pfad der Anrufung", "Pfad der Verführung", "Pfad des Mars", "Pfad der Technomantie",
-                    "Pfad der Rache des Vaters", "Thaumaturgische Gegenzauber", "Wetterkontrolle"];
+   this.pathList = ["Menschlichkeit", "Pfad des Blutes", "Pfad des Blutes(nach dem Fluch)",
+                    "Pfad des ehrenwerten Einklangs", "Pfad Kains", "Pfad der Katharer",
+                    "Pfad der Knochen", "Pfad des Todes und der Seele", "Pfad Liliths",
+                    "Pfad der Macht und der inneren Stimme", "Pfad der Metamorphose",
+                    "Pfad der Nacht", "Pfad des Paradox", "Pfad des Typhon",
+                    "Pfad des wilden Herzens", "Pfad der Hamonie"
+                    ];
 
   this.selectPathPt = selectPathPt;
 
