@@ -1,306 +1,304 @@
 var app = angular.module("site");
 app.service('AttributesService', ['UglyService', 'CharCreatorService',
- function(UglyService, CharCreatorService){
+    function(UglyService, CharCreatorService) {
 
-  this.priorityChange = priorityChange;
-  this.selectAttribute = selectAttribute;
-  this.getPriority = getPriority;
-  this.getPriorityPts = getPriorityPts;
-  this.isUglyClan = isUglyClan;
-  this.resetAttributes = resetAttributes;
-  this.resetPriorities = resetPriorities;
-  this.attributePriorities = ["Primary", "Secondary", "Tertiary"];
-  this.attributesPage = "./attributes/attributes.html";
-  this.attributePtsTotal = 15;
-  this.primaryPts = 7;
-  this.secondaryPts = 5;
-  this.tertiaryPts = 3;
-  this.selectedPriorities = [null, null, null];
-  this.attributesList = {};
-  var vm = this;
+        this.priorityChange = priorityChange;
+        this.selectAttribute = selectAttribute;
+        this.getPriority = getPriority;
+        this.getPriorityPts = getPriorityPts;
+        this.isUglyClan = isUglyClan;
+        this.resetAttributes = resetAttributes;
+        this.resetPriorities = resetPriorities;
+        this.attributePriorities = ["Primär", "Sekundär", "Tertiär"];
+        this.attributesPage = "./attributes/attributes.html";
+        this.attributePtsTotal = 15;
+        this.PrimärPts = 7;
+        this.SekundärPts = 5;
+        this.TertiärPts = 3;
+        this.selectedPriorities = [null, null, null];
+        this.attributesList = {};
+        var vm = this;
 
-  class Attribute {
-    constructor(name){
-      this.name = name;
-      this.pointCount = 1;
-      this.points = [{id:0, img:"./full.png", type: "original"},
-                     {id:1, img:"./empty.png", type: ""},
-                     {id:2, img:"./empty.png", type: ""},
-                     {id:3, img:"./empty.png", type: ""},
-                     {id:4, img:"./empty.png", type: ""}];
+        class Attribute {
+            constructor(name) {
+                this.name = name;
+                this.pointCount = 1;
+                this.points = [{ id: 0, img: "./full.png", type: "original" },
+                { id: 1, img: "./empty.png", type: "" },
+                { id: 2, img: "./empty.png", type: "" },
+                { id: 3, img: "./empty.png", type: "" },
+                { id: 4, img: "./empty.png", type: "" }];
 
-      this.reset = function(){
-        vm.attributePtsTotal += (this.pointCount - 1);
-        this.pointCount = 1;
-        this.points.forEach(function(point){
-          if(point.type == "freebie"){
-            CharCreatorService.changeFreebiePts(5);
-          }
-          if(point.id == 0){
-            point.img = "./full.png";
-            point.type = "original";
-          }
-          else {
-            point.img = "./empty.png";
-            point.type = "";
-          }
-        });
-      }
+                this.reset = function() {
+                    vm.attributePtsTotal += (this.pointCount - 1);
+                    this.pointCount = 1;
+                    this.points.forEach(function(point) {
+                        if (point.type == "freebie") {
+                            CharCreatorService.changeFreebiePts(5);
+                        }
+                        if (point.id == 0) {
+                            point.img = "./full.png";
+                            point.type = "original";
+                        }
+                        else {
+                            point.img = "./empty.png";
+                            point.type = "";
+                        }
+                    });
+                }
 
-      this.select = function(index){
-        if(this.points[index].img=="./full.png" ||
-           this.points[index].img=="./free.png")
-        {
-          this.points.forEach(function(point){
-            if(point.id <= index){
-              return;
+                this.select = function(index) {
+                    if (this.points[index].img == "./full.png" ||
+                        this.points[index].img == "./free.png") {
+                        this.points.forEach(function(point) {
+                            if (point.id <= index) {
+                                return;
+                            }
+                            else {
+                                point.img = "./empty.png";
+                                point.type = "";
+                            }
+                        });
+                    }
+                    if (this.points[index].img == "./empty.png") {
+                        this.points.forEach(function(point) {
+                            if (point.id > index) {
+                                return;
+                            }
+                            else {
+                                if (CharCreatorService.freebieMode && point.img != "./full.png") {
+                                    point.img = "./free.png";
+                                    point.type = "freebie";
+                                }
+                                else {
+                                    point.img = "./full.png";
+                                    point.type = "original";
+                                }
+                            }
+                        });
+                    }
+                };
+
+                this.zero = function() {
+                    this.points.forEach(function(point) {
+                        point.img = "./empty.png";
+                        point.type = "";
+                    });
+                };
+            };
+        };
+
+        this.strength = new Attribute("Körperkraft");
+        this.attributesList.strength = this.strength;
+        this.dexterity = new Attribute("Geschick");
+        this.attributesList.dexterity = this.dexterity
+        this.stamina = new Attribute("Widerstandsfähigkeit");
+        this.attributesList.stamina = this.stamina;
+        this.charisma = new Attribute("Charisma");
+        this.attributesList.charisma = this.charisma;
+        this.manipulation = new Attribute("Manipulation");
+        this.attributesList.manipulation = this.manipulation;
+        this.appearance = new Attribute("Erscheinungsbild")
+        this.attributesList.appearance = this.appearance;
+        this.perception = new Attribute("Wahrnehmung");
+        this.attributesList.perception = this.perception
+        this.intelligence = new Attribute("Intelligenz");
+        this.attributesList.intelligence = this.intelligence;
+        this.wits = new Attribute("Geistesschärfe");
+        this.attributesList.wits = this.wits;
+
+        this.attributeCategories = [
+            {
+                id: 0,
+                category: "Körperlich",
+                attributes: [this.strength, this.dexterity, this.stamina],
+                priority: null
+            },
+            {
+                id: 1,
+                category: "Gesellschaftlich",
+                attributes: [this.charisma, this.manipulation, this.appearance],
+                priority: null
+            },
+            {
+                id: 2,
+                category: "Geistig",
+                attributes: [this.perception, this.intelligence, this.wits],
+                priority: null
+            }];
+
+        function isUglyClan() {
+            if (UglyService.isUgly()) {
+                if (UglyService.dirtyBit) {
+                    this.resetAttributes();
+                    this.resetPriorities();
+                    UglyService.dirtyBit = false;
+                }
+                this.appearance.zero();
+                this.appearance.pointCount = 0;
+                return true;
             }
-            else{
-              point.img = "./empty.png";
-              point.type = "";
+            else {
+                if (UglyService.previousUgly()) {
+                    this.appearance.reset();
+                    this.appearance.pointCount = 1;
+                    UglyService.previousClan = null;
+                }
+                return false;
             }
-          });
-        }
-        if(this.points[index].img=="./empty.png")
-        {
-          this.points.forEach(function(point){
-            if(point.id > index){
-              return;
+        };
+
+        function resetAttributes() {
+            this.attributeCategories.forEach(function(attrCat) {
+                attrCat.attributes.forEach(function(attr) {
+                    attr.reset();
+                    attr.pointCount = 1;
+                });
+            });
+        };
+
+        function resetPriorities() {
+            this.attributeCategories.forEach(function(attrCat) {
+                attrCat.priority = null;
+            });
+            this.PrimärPts = 7;
+            this.SekundärPts = 5;
+            this.TertiärPts = 3;
+        };
+
+        function getPriority(attribute) {
+            for (var i = 0; i < this.attributeCategories.length; i++) {
+                if (this.attributeCategories[i].attributes.indexOf(attribute) != -1) {
+                    return this.selectedPriorities[i];
+                }
             }
-            else{
-              if(CharCreatorService.freebieMode && point.img != "./full.png"){
-                point.img = "./free.png";
-                point.type = "freebie";
-              }
-              else{
-                point.img = "./full.png";
-                point.type = "original";
-              }
+        };
+
+        function getPriorityPts(priority) {
+            switch (priority) {
+                case "Primär":
+                    return this.PrimärPts;
+                    break;
+                case "Sekundär":
+                    return this.SekundärPts;
+                    break;
+                case "Tertiär":
+                    return this.TertiärPts;
+                    break;
+                default:
+                    break;
             }
-          });
-        }
-      };
+        };
 
-      this.zero = function(){
-        this.points.forEach(function(point){
-          point.img = "./empty.png";
-          point.type = "";
-        });
-      };
-    };
-  };
+        function selectAttribute(attribute, index, catIndex) {
 
-  this.strength = new Attribute("Strength");
-  this.attributesList.strength = this.strength;
-  this.dexterity = new Attribute("Dexterity");
-  this.attributesList.dexterity = this.dexterity
-  this.stamina = new Attribute("Stamina");
-  this.attributesList.stamina = this.stamina;
-  this.charisma = new Attribute("Charisma");
-  this.attributesList.charisma = this.charisma;
-  this.manipulation = new Attribute("Manipulation");
-  this.attributesList.manipulation = this.manipulation;
-  this.appearance = new Attribute("Appearance")
-  this.attributesList.appearance = this.appearance;
-  this.perception = new Attribute("Perception");
-  this.attributesList.perception = this.perception
-  this.intelligence = new Attribute("Intelligence");
-  this.attributesList.intelligence = this.intelligence;
-  this.wits = new Attribute("Wits");
-  this.attributesList.wits = this.wits;
+            if (attribute.name == "Erscheinungsbild" && UglyService.isUgly()) {
+                return null;
+            }
+            var priority = this.getPriority(attribute);
 
-  this.attributeCategories = [
-    {
-      id: 0,
-      category: "physical",
-      attributes:[this.strength, this.dexterity, this.stamina],
-      priority:null
-   },
-   {
-     id: 1,
-     category: "social",
-     attributes:[this.charisma, this.manipulation, this.appearance],
-     priority: null
-   },
-   {
-     id: 2,
-     category: "mental",
-     attributes:[this.perception, this.intelligence, this.wits],
-     priority: null
-   }];
+            if (priority == null) {
+                return null;
+            }
 
-  function isUglyClan(){
-    if(UglyService.isUgly()){
-      if(UglyService.dirtyBit){
-        this.resetAttributes();
-        this.resetPriorities();
-        UglyService.dirtyBit = false;
-      }
-      this.appearance.zero();
-      this.appearance.pointCount = 0;
-      return true;
-    }
-    else {
-      if(UglyService.previousUgly()){
-        this.appearance.reset();
-        this.appearance.pointCount = 1;
-        UglyService.previousClan = null;
-      }
-      return false;
-    }
-  };
+            var priorityPts = 0;
+            var pointDiff = 0;
 
-  function resetAttributes(){
-    this.attributeCategories.forEach(function(attrCat){
-      attrCat.attributes.forEach(function(attr){
-        attr.reset();
-        attr.pointCount = 1;
-      });
-    });
-  };
+            //Different operations if using Freebie points.
+            if (CharCreatorService.freebieMode) {
 
-  function resetPriorities(){
-    this.attributeCategories.forEach(function(attrCat){
-      attrCat.priority = null;
-    });
-    this.primaryPts = 7;
-    this.secondaryPts = 5;
-    this.tertiaryPts = 3;
-  };
+                if (attribute.points[index].type == "original")
+                    return null;
 
-function getPriority(attribute){
- for(var i = 0; i < this.attributeCategories.length; i++){
-   if(this.attributeCategories[i].attributes.indexOf(attribute)!=-1){
-     return this.selectedPriorities[i];
-   }
- }
-};
+                priorityPts = CharCreatorService.getFreebiePts();
 
-function getPriorityPts(priority){
-  switch(priority){
-    case "Primary":
-      return this.primaryPts;
-      break;
-    case "Secondary":
-      return this.secondaryPts;
-      break;
-    case "Tertiary":
-      return this.tertiaryPts;
-      break;
-    default:
-      break;
-  }
-};
+                if (index)
 
-function selectAttribute(attribute, index, catIndex){
-
-  if(attribute.name == "Appearance" && UglyService.isUgly()){
-    return null;
-  }
-  var priority = this.getPriority(attribute);
-
-  if(priority==null){
-    return null;
-  }
-
-  var priorityPts = 0;
-  var pointDiff = 0;
-
-  //Different operations if using Freebie points.
-  if(CharCreatorService.freebieMode){
-
-    if(attribute.points[index].type == "original")
-      return null;
-
-    priorityPts = CharCreatorService.getFreebiePts();
-
-    if(index )
-
-    if(index < attribute.pointCount - 1)
-      pointDiff = (attribute.pointCount * 5) - ((index + 1) * 5);
-    if((index == attribute.pointCount-1 && index!=0)){
-      pointDiff = (attribute.pointCount * 5) - (index * 5);
-      index -= 1;
-    }
-    else if(index > attribute.pointCount-1)
-      pointDiff = ((attribute.pointCount-1) * 5) + (-5 * index);
+                    if (index < attribute.pointCount - 1)
+                        pointDiff = (attribute.pointCount * 5) - ((index + 1) * 5);
+                if ((index == attribute.pointCount - 1 && index != 0)) {
+                    pointDiff = (attribute.pointCount * 5) - (index * 5);
+                    index -= 1;
+                }
+                else if (index > attribute.pointCount - 1)
+                    pointDiff = ((attribute.pointCount - 1) * 5) + (-5 * index);
 
 
-    if(priorityPts + pointDiff < 0)
-      return null;
+                if (priorityPts + pointDiff < 0)
+                    return null;
 
-    CharCreatorService.changeFreebiePts(pointDiff);
-    attribute.pointCount = (index+1);
-    attribute.select(index, "freebie");
-    return;
-  }
-  else{
-     priorityPts = this.getPriorityPts(priority);
-     var pointDiff = attribute.pointCount - (index+1);
-  }
+                CharCreatorService.changeFreebiePts(pointDiff);
+                attribute.pointCount = (index + 1);
+                attribute.select(index, "freebie");
+                return;
+            }
+            else {
+                priorityPts = this.getPriorityPts(priority);
+                var pointDiff = attribute.pointCount - (index + 1);
+            }
 
-  //Do math to make sure they can't spend points they don't have, even when
-  //priorityPts isn't equal to 0.
-  //Case example: increase 3 pts when priorityPts = 2.
-  if(priorityPts+pointDiff < 0)
-    return null;
+            //Do math to make sure they can't spend points they don't have, even when
+            //priorityPts isn't equal to 0.
+            //Case example: increase 3 pts when priorityPts = 2.
+            if (priorityPts + pointDiff < 0)
+                return null;
 
-  //Change the point count in the attribute.
-  attribute.pointCount = (index+1);
+            //Change the point count in the attribute.
+            attribute.pointCount = (index + 1);
 
-  //Change the total amount of points still available for that category.
-  switch(priority){
-    case "Primary":
-      this.primaryPts += pointDiff;
-      break;
-    case "Secondary":
-      this.secondaryPts += pointDiff;
-      break;
-    case "Tertiary":
-      this.tertiaryPts += pointDiff;
-      break;
-    default:
-      break;
-  }
-  this.attributePtsTotal += pointDiff;
-  //Fill in the dots!
-  attribute.select(index, "original");
-};
+            //Change the total amount of points still available for that category.
+            switch (priority) {
+                case "Primär":
+                    this.PrimärPts += pointDiff;
+                    break;
+                case "Sekundär":
+                    this.SekundärPts += pointDiff;
+                    break;
+                case "Tertiär":
+                    this.TertiärPts += pointDiff;
+                    break;
+                default:
+                    break;
+            }
+            this.attributePtsTotal += pointDiff;
+            //Fill in the dots!
+            attribute.select(index, "original");
+        };
 
-function priorityChange(changedPriority, id, prevPriority){
-  this.attributeCategories[id].priority = changedPriority;
-  for(var i = 0; i < this.selectedPriorities.length; i++){
-    if(changedPriority == this.selectedPriorities[i] && id != i){
-      this.selectedPriorities[i] = null;
-      this.attributeCategories[i].attributes.forEach(function(attr){
-        attr.reset();
-      });
-    }
-  }
-    //Reset the dots.
-    this.attributeCategories[id].attributes.forEach(function(attr){
-      attr.reset();
+        function priorityChange(changedPriority, id, prevPriority) {
+            this.attributeCategories[id].priority = changedPriority;
+            for (var i = 0; i < this.selectedPriorities.length; i++) {
+                if (changedPriority == this.selectedPriorities[i] && id != i) {
+                    this.selectedPriorities[i] = null;
+                    this.attributeCategories[i].attributes.forEach(function(attr) {
+                        attr.reset();
+                    });
+                }
+            }
+            //Reset the dots.
+            this.attributeCategories[id].attributes.forEach(function(attr) {
+                attr.reset();
 
-    });
-    //Reset the point values.
-    if(prevPriority == "Primary"){
-      this.primaryPts = 7;
-    }
-    if(prevPriority == "Secondary"){
-      this.secondaryPts  = 5;
-    }
-    if(prevPriority == "Tertiary"){
-      this.tertiaryPts = 3;
-    }
-    if(changedPriority == "Primary"){
-      this.primaryPts = 7;
-    }
-    if(changedPriority == "Secondary"){
-      this.secondaryPts = 5;
-    }
-    if(changedPriority == "Tertiary"){
-      this.tertiaryPts = 3;
-    }
-  };
+            });
+            //Reset the point values.
+            if (prevPriority == "Primär") {
+                this.PrimärPts = 7;
+            }
+            if (prevPriority == "Sekundär") {
+                this.SekundärPts = 5;
+            }
+            if (prevPriority == "Tertiär") {
+                this.TertiärPts = 3;
+            }
+            if (changedPriority == "Primär") {
+                this.PrimärPts = 7;
+            }
+            if (changedPriority == "Sekundär") {
+                this.SekundärPts = 5;
+            }
+            if (changedPriority == "Tertiär") {
+                this.TertiärPts = 3;
+            }
+        };
 
-}]);
+    }]);

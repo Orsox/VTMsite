@@ -12,7 +12,7 @@ app.service('CharCreatorService', [function(){
   this.charConcept = null;
   this.charNature = null;
   this.charDemeanor = null;
-  this.charGeneration = "13th";
+  this.charGeneration = "13";
   this.charSire = null;
 
   this.getPlayer = function(){

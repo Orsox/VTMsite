@@ -84,76 +84,76 @@ app.service("AbilitiesService",
        };
      }
    };
-   this.alertness = new Ability("Alertness");
+   this.alertness = new Ability("Aufmerksamkeit");
    this.abilitiesList.alertness = this.alertness;
-   this.athletics = new Ability("Athletics");
+   this.athletics = new Ability("Sportlichkeit");
    this.abilitiesList.athletics = this.athletics;
-   this.awareness = new Ability("Awareness");
+   this.awareness = new Ability("Magiegespür");
    this.abilitiesList.awareness = this.awareness;
-   this.brawl = new Ability("Brawl");
+   this.brawl = new Ability("Handgemenge");
    this.abilitiesList.brawl = this.brawl;
-   this.empathy = new Ability("Empathy");
+   this.empathy = new Ability("Empathie");
    this.abilitiesList.empathy = this.empathy;
-   this.expression = new Ability("Expression");
+   this.expression = new Ability("Ausdruck");
    this.abilitiesList.expression = this.expression;
-   this.intimidation = new Ability("Intimidation");
+   this.intimidation = new Ability("Einschüchtern");
    this.abilitiesList.intimidation = this.intimidation;
-   this.leadership = new Ability("Leadership");
+   this.leadership = new Ability("Führungsqualitäten");
    this.abilitiesList.leadership = this.leadership;
-   this.streetwise = new Ability("Streetwise");
+   this.streetwise = new Ability("Szenekenntnis");
    this.abilitiesList.streetwise = this.streetwise;
-   this.subterfuge = new Ability("Subterfuge");
+   this.subterfuge = new Ability("Tierkunde");
    this.abilitiesList.subterfuge = this.subterfuge;
-   this.customtalent = new Ability('', 'customtalent');
+   this.customtalent = new Ability('', 'Hobbytalent');
    this.abilitiesList.customtalent = this.customtalent;
-   this.animalken = new Ability("Animal Ken");
+   this.animalken = new Ability("Tierkunde");
    this.abilitiesList.animalken = this.animalken;
-   this.crafts = new Ability("Crafts");
+   this.crafts = new Ability("Handwerk");
    this.abilitiesList.crafts = this.crafts;
-   this.drive = new Ability("Drive");
+   this.drive = new Ability("Fahren");
    this.abilitiesList.drive = this.drive;
-   this.etiquette = new Ability("Etiquette");
+   this.etiquette = new Ability("Etikette");
    this.abilitiesList.etiquette = this.etiquette;
-   this.firearms = new Ability("Firearms");
+   this.firearms = new Ability("Schusswaffen");
    this.abilitiesList.firearms = this.firearms;
-   this.larceny = new Ability("Larceny");
+   this.larceny = new Ability("Diebstahl");
    this.abilitiesList.larceny = this.larceny;
-   this.melee = new Ability("Melee");
+   this.melee = new Ability("Nahkampf");
    this.abilitiesList.melee = this.melee;
-   this.performance = new Ability("Performance");
+   this.performance = new Ability("Vortrag");
    this.abilitiesList.performance = this.performance;
-   this.stealth = new Ability("Stealth");
+   this.stealth = new Ability("Heimlichkeit");
    this.abilitiesList.stealth = this.stealth;
-   this.survival = new Ability("Survival");
+   this.survival = new Ability("Überleben");
    this.abilitiesList.survival = this.survival;
    this.customskill = new Ability('', 'customskill');
    this.abilitiesList.customskill = this.customskill;
-   this.academics = new Ability("Academics");
+   this.academics = new Ability("Akademisches Wissen");
    this.abilitiesList.academics = this.academics;
    this.computer = new Ability("Computer");
    this.abilitiesList.computer = this.computer;
-   this.finance = new Ability("Finance");
+   this.finance = new Ability("Finanzen");
    this.abilitiesList.finance = this.finance;
-   this.investigation = new Ability("Investigation");
+   this.investigation = new Ability("Nachforschungen");
    this.abilitiesList.investigation = this.investigation;
-   this.law = new Ability("Law");
+   this.law = new Ability("Gesetzeskenntnis");
    this.abilitiesList.law = this.law;
-   this.medicine = new Ability("Medicine");
+   this.medicine = new Ability("Medizin");
    this.abilitiesList.medicine = this.medicine;
-   this.occult = new Ability("Occult");
+   this.occult = new Ability("Okkultismus");
    this.abilitiesList.occult = this.occult;
-   this.politics = new Ability("Politics");
+   this.politics = new Ability("Politik");
    this.abilitiesList.politics = this.politics;
-   this.science = new Ability("Science");
+   this.science = new Ability("Naturwissenschaften");
    this.abilitiesList.science = this.science;
-   this.technology = new Ability("Technology");
+   this.technology = new Ability("Technologie");
    this.abilitiesList.technology = this.technology;
    this.customknowledge = new Ability('', 'customknowledge');
    this.abilitiesList.customknowledge = this.customknowledge;
 
    this.abilityCategories = [
      {
-       id: 0, category: "talents", priority: null,
+       id: 0, category: "Talente", priority: null,
        abilities:
        [
          this.alertness, this.athletics, this.awareness, this.brawl,
@@ -162,7 +162,7 @@ app.service("AbilitiesService",
        ]
     },
     {
-      id: 1, category: "skills", priority: null,
+      id: 1, category: "Fertigkeiten", priority: null,
       abilities:
       [
         this.animalken, this.crafts, this.drive, this.etiquette, this.firearms,
@@ -170,7 +170,7 @@ app.service("AbilitiesService",
       ]
     },
     {
-      id: 2, category: "knowledges", priority: null,
+      id: 2, category: "Kenntnisse", priority: null,
       abilities:
       [
         this.academics, this.computer, this.finance, this.investigation,
