@@ -77,10 +77,10 @@ app.service("VirtuesService",
     constructor(name){
       this.name = name;
       if(name == "Gewissen")
-        this.displayName = "Gewissen/Conviction";
+        this.displayName = "Gewissen/Überzeugung";
       else{
         if(name == "Selbstbeherrschung")
-          this.displayName = "Selbstbeherrschung/Instinct"
+          this.displayName = "Selbstbeherrschung/Instinkt"
         else
           this.displayName = name;
         }
