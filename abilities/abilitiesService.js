@@ -11,7 +11,7 @@ app.service("AbilitiesService",
    this.resetAbilities = resetAbilities;
    this.resetPriorities = resetPriorities;
    this.setCustomAbility = setCustomAbility;
-   this.abilityPriorities = ["Primary", "Secondary", "Tertiary"];
+   this.abilityPriorities = ["Primär", "Sekundär", "Tertiär"];
    this.abilitiesPage = "./abilities/abilities.html";
    this.abilityPtsTotal = 27;
    this.primaryPts = 13;
@@ -163,8 +163,7 @@ app.service("AbilitiesService",
     },
     {
       id: 1, category: "Fertigkeiten", priority: null,
-      abilities:
-      [
+      abilities: [
         this.animalken, this.crafts, this.drive, this.etiquette, this.firearms,
         this.larceny, this.melee, this.performance, this.stealth, this.survival, this.customskill
       ]
@@ -189,13 +188,13 @@ app.service("AbilitiesService",
 
     function getPriorityPts(priority){
      switch(priority){
-       case "Primary":
+       case "Primär":
          return this.primaryPts;
          break;
-       case "Secondary":
+       case "Sekundär":
          return this.secondaryPts;
          break;
-       case "Tertiary":
+       case "Tertiär":
          return this.tertiaryPts;
          break;
        default:
@@ -264,13 +263,13 @@ app.service("AbilitiesService",
 
       //Change the total amount of points still available for that category.
       switch(priority){
-       case "Primary":
+       case "Primär":
          this.primaryPts += pointDiff;
          break;
-       case "Secondary":
+       case "Sekundär":
          this.secondaryPts += pointDiff;
          break;
-       case "Tertiary":
+       case "Tertiär":
          this.tertiaryPts += pointDiff;
          break;
        default:
@@ -297,22 +296,22 @@ app.service("AbilitiesService",
 
         });
         //Reset the point values.
-        if(prevPriority == "Primary"){
+        if(prevPriority == "Primär"){
           this.primaryPts = 13;
         }
-        if(prevPriority == "Secondary"){
+        if(prevPriority == "Sekundär"){
           this.secondaryPts  = 9;
         }
-        if(prevPriority == "Tertiary"){
+        if(prevPriority == "Tertiär"){
           this.tertiaryPts = 5;
         }
-        if(changedPriority == "Primary"){
+        if(changedPriority == "Primär"){
           this.primaryPts = 13;
         }
-        if(changedPriority == "Secondary"){
+        if(changedPriority == "Sekundär"){
           this.secondaryPts = 9;
         }
-        if(changedPriority == "Tertiary"){
+        if(changedPriority == "Tertiär"){
           this.tertiaryPts = 5;
         }
     };
