@@ -2,18 +2,18 @@
   <tr>
     <th></th>
     <th></th>
-      <th style="text-align: center; font-size: 18pt; font-weight: 500;">Attributes</th>
+      <th style="text-align: center; font-size: 18pt; font-weight: 500;">Attribute</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
   <tr>
-    <th style="width:100px;">
+    <th style="width:140px;">
       <select ng-model="attrCtrl.selectedPriorities[0]"
        ng-options="priority for priority in attrCtrl.attributePriorities"
        ng-change="attrCtrl.priorityChange(attrCtrl.selectedPriorities[0], 0, attrCtrl.attributeCategories[0].priority)">
       </select>
-      <div class="attrHead">Physical</div>
+      <div class="attrHead">Körperlich</div>
     </th>
     <th style="width:245px;">
       <div class="num">{{attrCtrl.getPriorityPts(attrCtrl.selectedPriorities[0])}}</div>
@@ -23,17 +23,17 @@
        ng-options="priority for priority in attrCtrl.attributePriorities"
        ng-change="attrCtrl.priorityChange(attrCtrl.selectedPriorities[1], 1, attrCtrl.attributeCategories[1].priority)">
       </select>
-      <div class="attrHead">Social</div>
+      <div class="attrHead">Gesellschaftlich</div>
     </th>
     <th style="width:245px;">
       <div class="num">{{attrCtrl.getPriorityPts(attrCtrl.selectedPriorities[1])}}</div>
     </th>
-    <th style="width:100px;">
+    <th style="width:140px;">
       <select ng-model="attrCtrl.selectedPriorities[2]"
        ng-options="priority for priority in attrCtrl.attributePriorities"
        ng-change="attrCtrl.priorityChange(attrCtrl.selectedPriorities[2], 2, attrCtrl.attributeCategories[2].priority)">
       </select>
-      <div class="attrHead">Mental</div>
+      <div class="attrHead">Geistig</div>
     </th>
     <th style="width:245px;">
       <div class="num">{{attrCtrl.getPriorityPts(attrCtrl.selectedPriorities[2])}}</div>
@@ -43,7 +43,7 @@
 
 <table>
   <tr>
-    <td style="width:100px;">
+    <td style="width:140px;">
       <div termindex term="{{attrCtrl.strength.name}}" class="attrLabel">
         {{attrCtrl.strength.name}}
       </div>
@@ -53,7 +53,7 @@
         <img class="attrimg" ng-src="{{attrPt.img}}" ng-click="attrCtrl.selectAttribute(attrCtrl.strength, $index, 0)"/>
       </div>
     </td>
-  <td style="width:100px;">
+  <td style="width:140px;">
     <div termindex term="{{attrCtrl.charisma.name}}" class="attrLabel">
       {{attrCtrl.charisma.name}}
     </div>
@@ -63,7 +63,7 @@
       <img class="attrimg" ng-src="{{attrPt.img}}" ng-click="attrCtrl.selectAttribute(attrCtrl.charisma, $index, 1)"/>
     </div>
   </td>
-  <td style="width:100px;">
+  <td style="width:140px;">
     <div termindex term="{{attrCtrl.perception.name}}" class="attrLabel">
       {{attrCtrl.perception.name}}
     </div>
@@ -75,7 +75,7 @@
   </td>
 </tr>
 <tr>
-  <td style="width:100px;">
+  <td style="width:140px;">
     <div termindex term="{{attrCtrl.dexterity.name}}" class="attrLabel">
       {{attrCtrl.dexterity.name}}
     </div>
@@ -85,7 +85,7 @@
       <img class="attrimg" ng-src="{{attrPt.img}}" ng-click="attrCtrl.selectAttribute(attrCtrl.dexterity, $index, 0)"/>
     </div>
   </td>
-<td style="width:100px;">
+<td style="width:140px;">
   <div termindex term="{{attrCtrl.manipulation.name}}" class="attrLabel">
     {{attrCtrl.manipulation.name}}
   </div>
@@ -95,7 +95,7 @@
     <img class="attrimg" ng-src="{{attrPt.img}}" ng-click="attrCtrl.selectAttribute(attrCtrl.manipulation, $index, 1)"/>
   </div>
 </td>
-<td style="width:100px;">
+<td style="width:140px;">
   <div termindex term="{{attrCtrl.intelligence.name}}" class="attrLabel">
     {{attrCtrl.intelligence.name}}
   </div>
@@ -107,7 +107,7 @@
 </td>
 </tr>
 <tr>
-  <td style="width:100px;">
+  <td style="width:140px;">
     <div termindex term="{{attrCtrl.stamina.name}}" class="attrLabel">
       {{attrCtrl.stamina.name}}
     </div>
@@ -117,7 +117,7 @@
       <img class="attrimg" ng-src="{{attrPt.img}}" ng-click="attrCtrl.selectAttribute(attrCtrl.stamina, $index, 0)"/>
     </div>
   </td>
-<td style="width:100px;">
+<td style="width:140px;">
   <div termindex term="{{attrCtrl.appearance.name}}" class="attrLabel">
     {{attrCtrl.appearance.name}}
   </div>
@@ -127,7 +127,7 @@
       <img class="attrimg" ng-src="{{attrPt.img}}" ng-click="attrCtrl.selectAttribute(attrCtrl.appearance, $index, 1)"/>
     </div>
   </td>
-<td style="width:100px;">
+<td style="width:140px;">
   <div termindex term="{{attrCtrl.wits.name}}" class="attrLabel">
     {{attrCtrl.wits.name}}
   </div>
