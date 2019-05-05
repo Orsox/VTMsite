@@ -96,9 +96,9 @@ function($http, CharCreatorService, ClanService, AttributesService,
     doc.text(155.8, 47.7, CharCreatorService.charGeneration);
     doc.text(39.4, 53.5, CharCreatorService.charChronicle);
     doc.text(93.2, 53.5, CharCreatorService.charConcept);
-    doc.text(144.1, 53.5, CharCreatorService.charSire);
+    doc.text(150.1, 53.5, CharCreatorService.charSire);
 
-    var attrPosition = 59.74;
+    var attrPosition = 40.94;
     var attrHeight = 71.52;
 
     for(var i = 0; i < Object.keys(AttributesService.attributesList).length; i++){
