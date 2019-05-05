@@ -18,9 +18,9 @@ app.service("MeritFlawService", ['CharCreatorService',
  this.masterMeritList;
  this.masterFlawList;
 
- this.physicalMeritList = {"": 0, "Acute Sense (1pt)": 1, "Ambidextrous (2pt)": 1, "Bruiser (1pt)": 1, "Catlike Balance (1pt)": 1,
-                           "Early Riser (1pt)": 1, "Eat Food (1pt)": 1, "Friendly Face (1pt)": 1, "Blush of Health (2pt)": 2,
-                           "Enchanting Voice (2pt)": 2, "Daredevil (3pt)": 3, "Efficient Digestion (3pt)": 3, "Huge Size (4pt)": 4};
+ this.physicalMeritList = {"": 0, "Geschärfte Sinne (1pt)": 1, "Beidhändig (1pt)": 1, "Schläger (1pt)": 1, "Katzenhaftes Gleichgewicht (1pt)": 1,
+                           "Frühaufsteher (1pt)": 1, "Essen (1pt)": 1, "Freundliches Gesicht (1pt)": 1, "Rosiger Teint (2pt)": 2,
+                           "Bezauberne Stimme (2pt)": 2, "Daredevil (3pt)": 3, "Wirksame Verdauung (3pt)": 3, "Riesenwuchs (4pt)": 4};
 
  this.physicalFlawList = {"": 0, "Hard of Hearing (1pt)": 1, "Short (1pt)": 1, "Smell of the Grave (1pt)": 1,
                           "Tic/Twitch (1pt)": 1, "Bad Sight (1pt)": 1, "Bad Sight (3pt)": 3, "Fourteenth Generation (2pt)": 2,

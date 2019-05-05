@@ -53,7 +53,7 @@ app.service("VirtuesService",
          virtue.pointCount = (index+1);
        }
 
-       if(virtue.name != "Mut"){
+       if(virtue.name != "Courage"){
          PathService.selectedPath.pointCount += (-pointDiff);
          PathService.selectedPath.select(PathService.selectedPath.pointCount-1);
          PathService.selectedPath.pointMin = PathService.selectedPath.pointCount;
@@ -76,13 +76,13 @@ app.service("VirtuesService",
   class Virtue {
     constructor(name){
       this.name = name;
-      if(name == "Gewissen")
+      if(name == "Conscience")
         this.displayName = "Gewissen/Überzeugung";
       else{
-        if(name == "Selbstbeherrschung")
+        if(name == "Self-control")
           this.displayName = "Selbstbeherrschung/Instinkt"
         else
-          this.displayName = name;
+          this.displayName = "Mut";
         }
       this.pointCount = 1;
       this.points = [{id:0, img:"./full.png", type: "original"},
@@ -146,10 +146,10 @@ app.service("VirtuesService",
     }
   }
 
-  this.virtueList = {"Gewissen": new Virtue("Gewissen"),
-                     "Selbstbeherrschung": new Virtue("Selbstbeherrschung"),
-                     "Mut": new Virtue("Mut")};
+  this.virtueList = {"Conscience": new Virtue("Conscience"),
+                     "Self-control": new Virtue("Self-control"),
+                     "Courage": new Virtue("Courage")};
 
-  this.pathCount = this.virtueList["Gewissen"].pointCount + this.virtueList["Selbstbeherrschung"].pointCount;
+  this.pathCount = this.virtueList["Conscience"].pointCount + this.virtueList["Self-control"].pointCount;
 
 }]);
