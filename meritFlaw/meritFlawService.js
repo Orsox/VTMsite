@@ -68,15 +68,15 @@ app.service("MeritFlawService", ['CharCreatorService',
 
  this.supernaturalMeritList = {"": 0, "Täuschende Aura (1pt)": 1, "Heilende Berührung (1pt)": 1, "Harmlos für Tiere (1pt)": 1,
                                "Medium (2pt)": 2, "Magieresistenz (2pt)": 2, "Verborgene Diablerie (3pt)": 3, "Glück (3pt)": 3,
-                               "Orakel (3pt)": 3, "Geister Mentor (3pt)": 3, "Wahre Liebe (4pt)": 4, "Additional Discipline (5pt)": 5,
-                               "Unbondable (5pt)": 5, "Nine Lives (6pt)": 6, "True Faith (7pt)": 7};
+                               "Orakel (3pt)": 3, "Geister Mentor (3pt)": 3, "Wahre Liebe (4pt)": 4, "Zusätzliche Disziplin (5pt)": 5,
+                               "Immun gegen Blutsbande (5pt)": 5, "Neun Leben (6pt)": 6, "Wahrer Glaube (7pt)": 7};
 
- this.supernaturalFlawList = {"": 0, "Cast No Reflection (1pt)": 1, "Cold Breeze (1pt)": 1, "Repulsed by Garlic (1pt)": 1,
-                              "Touch of Frost (1pt)": 1, "Cursed (1pt)": 1, "Cursed (2pt)": 2, "Cursed (3pt)": 3,
-                              "Cursed (4pt)": 4, "Cursed (5pt)": 5, "Beacon of the Unholy (2pt)": 2, "Deathsight (2pt)": 2,
-                              "Eerie Presence (2pt)": 2, "Lord of the Flies (2pt)": 2, "Can't Cross Running Water (3pt)": 3,
-                              "Haunted (3pt)": 3, "Repelled by Crosses (3pt)": 3, "Grip of the Damned (4pt)": 4, "Dark Fate (5pt)": 5,
-                              "Light-Sensitive (5pt)": 5};
+ this.supernaturalFlawList = {"": 0, "Kein Spiegelbild (1pt)": 1, "Kalte Brise (1pt)": 1, "Abgestoßen durch Knoblauch (1pt)": 1,
+                              "Frostige Berührung (1pt)": 1, "Verflucht (1pt)": 1, "Verflucht (2pt)": 2, "Verflucht (3pt)": 3,
+                              "Verflucht (4pt)": 4, "Verflucht (5pt)": 5, "Leuchtfeuer des Gottlosen (2pt)": 2, "Todessicht (2pt)": 2,
+                              "Eerie Presence (2pt)": 2, "Lord of the Flies (2pt)": 2, "Kann kein fließendes Wasser überqueren (3pt)": 3,
+                              "Spuk (3pt)": 3, "Angst for Kreuzen (3pt)": 3, "Griff der Verdammten (4pt)": 4, "Dunkles Schicksal (5pt)": 5,
+                              "Lichtempfindlich (5pt)": 5};
 
 this.clansMeritList = {"": 0, "Sectarian Ally (1pt)": 1, "Thousand Meter Killer (1pt)": 1,
                               "Fury's Focus (3pt, Prerequisite: Path of Entelechy)": 3, "Dynamic Personality (5pt)": 5,
