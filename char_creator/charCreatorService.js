@@ -19,9 +19,9 @@ app.service('CharCreatorService', [function(){
     return this.charPlayer;
   }
 
-  this.generations = ["3rd", "4th", "5th", "6th", "7th",
-                      "8th", "9th", "10th", "11th", "12th",
-                      "13th", "14th", "15th"];
+  this.generations = ["3", "4", "5", "6", "7",
+                      "8", "9", "10", "11", "12",
+                      "13", "14", "15"];
 
   this.getFreebiePts = function(){
     return this.freebiePts;
