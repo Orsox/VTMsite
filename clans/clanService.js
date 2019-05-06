@@ -86,7 +86,7 @@ app.service("ClanService", function(){
       disciplines: ["Beherrschung", "Nekromantie", "Stärke"]
     },
     {
-      id: 14, name: "Sendboten des Todes",
+      id: 14, name: 'Sendboten des Todes',
       filters: ["Alle", "Sabbat", "Alle Blutlinien"],
       disciplines: ["Auspex", "Seelenstärke", "Nekromantie"]
     },
