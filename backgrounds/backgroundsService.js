@@ -157,8 +157,11 @@ app.service("BackgroundsService", ['CharCreatorService','CharCreatorController',
      this.selectedList[index] = new Background(name);
      this.selectedList[index].pointCount = pointCount;
      this.selectedList[index].points = points;
+<<<<<<< HEAD
     // CharCreatorService.charGeneration = 5;
 
+=======
+>>>>>>> parent of c879324... background geneartion
    }
  }
 
