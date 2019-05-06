@@ -4,7 +4,7 @@ app.service('UglyService', function(){
   this.currentClan = null;
   this.previousClan = null;
   this.dirtyBit = false;
-  this.uglyList = ['Gargoyles', 'Harbingers of Skulls', 'Nosferatu', 'Samedi'];
+  this.uglyList = ['Gargoylen', 'Sendboten des Todes', 'Nosferatu', 'Samedi'];
 
   this.setClan = function(clan){
     this.previousClan = this.currentClan;
