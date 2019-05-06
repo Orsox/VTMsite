@@ -96,7 +96,7 @@ app.service("ClanService", function(){
       disciplines: ["Beherrschung", "Schattenspiele", "Mytherceria"]
     },
     {
-      id: 16, name: "Lamien",
+      id: 16, name: "Lamia",
       filters: ["Alle", "Alle Blutlinien", "Dunkles Zeitalter"],
       disciplines: ["Seelenstärke", "Nekromantie", "Stärke"]
     },
@@ -167,6 +167,7 @@ app.service("ClanService", function(){
       disciplines: ["Auspex", "Beherrschung", "Thaumaturgie"]
     },
     {
+      id: 29, name: "Wahre Brujah",
       filters: ["Alle", "Alle Blutlinien", "Die Unabhängigen", "Dunkles Zeitalter"],
       disciplines: ["Stärke", "Präsenz", "Temporis"]
     },
