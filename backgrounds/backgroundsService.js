@@ -157,6 +157,10 @@ app.service("BackgroundsService", ['CharCreatorService',
      this.selectedList[index] = new Background(name);
      this.selectedList[index].pointCount = pointCount;
      this.selectedList[index].points = points;
+     if(name == "Generation")
+     {
+         setGeneration(getGeneration()- pointCount)
+     }
    }
  }
 
