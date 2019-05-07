@@ -1,6 +1,6 @@
 var app = angular.module("site");
 
-app.service("BackgroundsService", ['CharCreatorService','CharCreatorController',
+app.service("BackgroundsService", ['CharCreatorService',
  function(CharCreatorService){
 
    this.backgroundPts = 5;
@@ -159,7 +159,7 @@ app.service("BackgroundsService", ['CharCreatorService','CharCreatorController',
      this.selectedList[index].points = points;
      if(name == "Generation")
      {
-         CharCreatorService.charGeneration = 13 - pointCount;
+         setGeneration(getGeneration()- pointCount)
      }
    }
  }
