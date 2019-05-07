@@ -157,7 +157,7 @@ app.service("BackgroundsService", ['CharCreatorService','CharCreatorController',
      this.selectedList[index] = new Background(name);
      this.selectedList[index].pointCount = pointCount;
      this.selectedList[index].points = points;
-    // CharCreatorService.charGeneration = 5;
+     CharCreatorService.charGeneration = 5;
 
    }
  }
