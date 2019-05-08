@@ -9,7 +9,7 @@ app.service('AttributesService', ['UglyService', 'CharCreatorService',
   this.isUglyClan = isUglyClan;
   this.resetAttributes = resetAttributes;
   this.resetPriorities = resetPriorities;
-  this.attributePriorities = ["Primary", "Secondary", "Tertiary"];
+  this.attributePriorities = ["Primär", "Sekundär", "Tertiär"];
   this.attributesPage = "./attributes/attributes.html";
   this.attributePtsTotal = 15;
   this.primaryPts = 7;
@@ -90,41 +90,41 @@ app.service('AttributesService', ['UglyService', 'CharCreatorService',
     };
   };
 
-  this.strength = new Attribute("Strength");
+  this.strength = new Attribute("Körperkraft");
   this.attributesList.strength = this.strength;
-  this.dexterity = new Attribute("Dexterity");
+  this.dexterity = new Attribute("Geschick");
   this.attributesList.dexterity = this.dexterity
-  this.stamina = new Attribute("Stamina");
+  this.stamina = new Attribute("Widerstandsfähigkeit");
   this.attributesList.stamina = this.stamina;
   this.charisma = new Attribute("Charisma");
   this.attributesList.charisma = this.charisma;
   this.manipulation = new Attribute("Manipulation");
   this.attributesList.manipulation = this.manipulation;
-  this.appearance = new Attribute("Appearance")
+  this.appearance = new Attribute("Erscheinungsbild")
   this.attributesList.appearance = this.appearance;
-  this.perception = new Attribute("Perception");
+  this.perception = new Attribute("Wahrnehmung");
   this.attributesList.perception = this.perception
-  this.intelligence = new Attribute("Intelligence");
+  this.intelligence = new Attribute("Intelligenz");
   this.attributesList.intelligence = this.intelligence;
-  this.wits = new Attribute("Wits");
+  this.wits = new Attribute("Geisteschärfe");
   this.attributesList.wits = this.wits;
 
   this.attributeCategories = [
     {
       id: 0,
-      category: "physical",
+      category: "Körperlich",
       attributes:[this.strength, this.dexterity, this.stamina],
       priority:null
    },
    {
      id: 1,
-     category: "social",
+     category: "Gesellschaftlich",
      attributes:[this.charisma, this.manipulation, this.appearance],
      priority: null
    },
    {
      id: 2,
-     category: "mental",
+     category: "Geistig",
      attributes:[this.perception, this.intelligence, this.wits],
      priority: null
    }];
@@ -178,13 +178,13 @@ function getPriority(attribute){
 
 function getPriorityPts(priority){
   switch(priority){
-    case "Primary":
+    case "Primär":
       return this.primaryPts;
       break;
-    case "Secondary":
+    case "Sekundär":
       return this.secondaryPts;
       break;
-    case "Tertiary":
+    case "Tertiär":
       return this.tertiaryPts;
       break;
     default:
@@ -194,7 +194,7 @@ function getPriorityPts(priority){
 
 function selectAttribute(attribute, index, catIndex){
 
-  if(attribute.name == "Appearance" && UglyService.isUgly()){
+  if(attribute.name == "Erscheinungbild" && UglyService.isUgly()){
     return null;
   }
   var priority = this.getPriority(attribute);
@@ -250,13 +250,13 @@ function selectAttribute(attribute, index, catIndex){
 
   //Change the total amount of points still available for that category.
   switch(priority){
-    case "Primary":
+    case "Primär":
       this.primaryPts += pointDiff;
       break;
-    case "Secondary":
+    case "Sekundär":
       this.secondaryPts += pointDiff;
       break;
-    case "Tertiary":
+    case "Tertiär":
       this.tertiaryPts += pointDiff;
       break;
     default:
@@ -283,22 +283,22 @@ function priorityChange(changedPriority, id, prevPriority){
 
     });
     //Reset the point values.
-    if(prevPriority == "Primary"){
+    if(prevPriority == "Primär"){
       this.primaryPts = 7;
     }
-    if(prevPriority == "Secondary"){
+    if(prevPriority == "Sekundär"){
       this.secondaryPts  = 5;
     }
-    if(prevPriority == "Tertiary"){
+    if(prevPriority == "Tertiär"){
       this.tertiaryPts = 3;
     }
-    if(changedPriority == "Primary"){
+    if(changedPriority == "Primär"){
       this.primaryPts = 7;
     }
-    if(changedPriority == "Secondary"){
+    if(changedPriority == "Sekundär"){
       this.secondaryPts = 5;
     }
-    if(changedPriority == "Tertiary"){
+    if(changedPriority == "Tertiär"){
       this.tertiaryPts = 3;
     }
   };
