@@ -8,7 +8,7 @@
     <th></th>
   </tr>
   <tr>
-    <th style="width:150px;">
+    <th style="width:175px;">
       <select ng-model="abCtrl.selectedPriorities[0]"
       ng-options="priority for priority in abCtrl.abilityPriorities"
       ng-change="abCtrl.priorityChange(abCtrl.selectedPriorities[0], 0, abCtrl.abilityCategories[0].priority)">
@@ -42,7 +42,7 @@
 </table>
 <table ng-table="abCtrl.tableParams1" show-filter="false" >
   <tr ng-repeat="ability in $data">
-    <td style="width:150px;">
+    <td style="width:175px;">
       <div ng-if="ability.col1.id != null">
         <input class="custom-ability" ng-model="abCtrl.customtalent.name"
                ng-blur="abCtrl.setCustomAbility(ability.col1, abCtrl.customtalent.name)">
@@ -58,7 +58,7 @@
         <img class="abimg" ng-src="{{abPt.img}}" ng-click="abCtrl.selectAbility(ability.col1, $index)"/>
       </div>
     </td>
-    <td style="width:150px;">
+    <td style="width:175px;">
       <div ng-if="ability.col2.id != null">
         <input class="custom-ability" ng-model="abCtrl.customskill.name"
                ng-blur="abCtrl.setCustomAbility(ability.col2, abCtrl.customskill.name)">
@@ -74,7 +74,7 @@
         <img class="abimg" ng-src="{{abPt.img}}" ng-click="abCtrl.selectAbility(ability.col2, $index)"/>
       </div>
     </td>
-    <td style="width:150px;">
+    <td style="width:175px;">
       <div ng-if="ability.col3.id != null">
         <input class="custom-ability" ng-model="abCtrl.customknowledge.name"
                ng-blur="abCtrl.setCustomAbility(ability.col3, abCtrl.customknowledge.name)">
