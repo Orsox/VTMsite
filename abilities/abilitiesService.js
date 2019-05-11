@@ -11,7 +11,7 @@ app.service("AbilitiesService",
    this.resetAbilities = resetAbilities;
    this.resetPriorities = resetPriorities;
    this.setCustomAbility = setCustomAbility;
-   this.abilityPriorities = ["Primary", "Secondary", "Tertiary"];
+   this.abilityPriorities = ["Primär", "Sekundär", "Tertiär"];
    this.abilitiesPage = "./abilities/abilities.html";
    this.abilityPtsTotal = 27;
    this.primaryPts = 13;
@@ -84,98 +84,98 @@ app.service("AbilitiesService",
        };
      }
    };
-   this.alertness = new Ability("Alertness");
+   this.alertness = new Ability("Aufmerksamkeit");
    this.abilitiesList.alertness = this.alertness;
-   this.athletics = new Ability("Athletics");
-   this.abilitiesList.athletics = this.athletics;
-   this.awareness = new Ability("Awareness");
-   this.abilitiesList.awareness = this.awareness;
-   this.brawl = new Ability("Brawl");
-   this.abilitiesList.brawl = this.brawl;
-   this.empathy = new Ability("Empathy");
-   this.abilitiesList.empathy = this.empathy;
-   this.expression = new Ability("Expression");
+   this.expression = new Ability("Ausdruck");
    this.abilitiesList.expression = this.expression;
-   this.intimidation = new Ability("Intimidation");
-   this.abilitiesList.intimidation = this.intimidation;
-   this.leadership = new Ability("Leadership");
-   this.abilitiesList.leadership = this.leadership;
-   this.streetwise = new Ability("Streetwise");
-   this.abilitiesList.streetwise = this.streetwise;
-   this.subterfuge = new Ability("Subterfuge");
+   this.subterfuge = new Ability("Ausflüchte");
    this.abilitiesList.subterfuge = this.subterfuge;
-   this.customtalent = new Ability('', 'customtalent');
+   this.intimidation = new Ability("Einschüchtern");
+   this.abilitiesList.intimidation = this.intimidation;
+   this.empathy = new Ability("Empathie");
+   this.abilitiesList.empathy = this.empathy;
+   this.leadership = new Ability("Führungsqualitäten");
+   this.abilitiesList.leadership = this.leadership;
+   this.brawl = new Ability("Handgemenge");
+   this.abilitiesList.brawl = this.brawl;
+   this.awareness = new Ability("Magiegespür");
+   this.abilitiesList.awareness = this.awareness; 
+   this.athletics = new Ability("Sportlichkeit");
+   this.abilitiesList.athletics = this.athletics;       
+   this.streetwise = new Ability("Szenekenntnis");
+   this.abilitiesList.streetwise = this.streetwise;   
+   this.customtalent = new Ability('', 'Hobbytalent');
    this.abilitiesList.customtalent = this.customtalent;
-   this.animalken = new Ability("Animal Ken");
-   this.abilitiesList.animalken = this.animalken;
-   this.crafts = new Ability("Crafts");
-   this.abilitiesList.crafts = this.crafts;
-   this.drive = new Ability("Drive");
-   this.abilitiesList.drive = this.drive;
-   this.etiquette = new Ability("Etiquette");
-   this.abilitiesList.etiquette = this.etiquette;
-   this.firearms = new Ability("Firearms");
-   this.abilitiesList.firearms = this.firearms;
-   this.larceny = new Ability("Larceny");
+   this.larceny = new Ability("Diebstahl");
    this.abilitiesList.larceny = this.larceny;
-   this.melee = new Ability("Melee");
-   this.abilitiesList.melee = this.melee;
-   this.performance = new Ability("Performance");
-   this.abilitiesList.performance = this.performance;
-   this.stealth = new Ability("Stealth");
+   this.etiquette = new Ability("Etikette");
+   this.abilitiesList.etiquette = this.etiquette;
+   this.drive = new Ability("Fahren");
+   this.abilitiesList.drive = this.drive;
+   this.crafts = new Ability("Handwerk");
+   this.abilitiesList.crafts = this.crafts;
+   this.stealth = new Ability("Heimlichkeit");
    this.abilitiesList.stealth = this.stealth;
-   this.survival = new Ability("Survival");
+   this.melee = new Ability("Nahkampf");
+   this.abilitiesList.melee = this.melee;
+   this.firearms = new Ability("Schusswaffen");
+   this.abilitiesList.firearms = this.firearms;
+   this.animalken = new Ability("Tierkunde");
+   this.abilitiesList.animalken = this.animalken;
+   this.survival = new Ability("Überleben");
    this.abilitiesList.survival = this.survival;
+   this.performance = new Ability("Vortrag");
+   this.abilitiesList.performance = this.performance;
    this.customskill = new Ability('', 'customskill');
    this.abilitiesList.customskill = this.customskill;
-   this.academics = new Ability("Academics");
-   this.abilitiesList.academics = this.academics;
+   this.academics = new Ability("Akademisches Wissen");
+   this.abilitiesList.academics = this.academics;  
    this.computer = new Ability("Computer");
    this.abilitiesList.computer = this.computer;
-   this.finance = new Ability("Finance");
+   this.finance = new Ability("Finanzen");
    this.abilitiesList.finance = this.finance;
-   this.investigation = new Ability("Investigation");
-   this.abilitiesList.investigation = this.investigation;
-   this.law = new Ability("Law");
+   this.law = new Ability("Gesetzeskenntnis");
    this.abilitiesList.law = this.law;
-   this.medicine = new Ability("Medicine");
+   this.medicine = new Ability("Medizin");
    this.abilitiesList.medicine = this.medicine;
-   this.occult = new Ability("Occult");
-   this.abilitiesList.occult = this.occult;
-   this.politics = new Ability("Politics");
-   this.abilitiesList.politics = this.politics;
-   this.science = new Ability("Science");
+   this.investigation = new Ability("Nachforschungen");
+   this.abilitiesList.investigation = this.investigation;
+   this.science = new Ability("Naturwissenschaften");
    this.abilitiesList.science = this.science;
-   this.technology = new Ability("Technology");
+   this.occult = new Ability("Okkultismus");
+   this.abilitiesList.occult = this.occult;
+   this.politics = new Ability("Politik");
+   this.abilitiesList.politics = this.politics;
+   this.technology = new Ability("Technologie");
    this.abilitiesList.technology = this.technology;
    this.customknowledge = new Ability('', 'customknowledge');
    this.abilitiesList.customknowledge = this.customknowledge;
 
    this.abilityCategories = [
      {
-       id: 0, category: "talents", priority: null,
+       id: 0, category: "Talente", priority: null,
        abilities:
        [
-         this.alertness, this.athletics, this.awareness, this.brawl,
-         this.empathy, this.expression, this.intimidation, this.leadership,
-         this.streetwise, this.subterfuge, this.customtalent
+         this.alertness, this.expression, this.subterfuge, this.intimidation,
+         this.empathy, this.leadership, this.brawl,
+         this.awareness, this.athletics, 
+         this.streetwise, this.customtalent
        ]
     },
     {
-      id: 1, category: "skills", priority: null,
-      abilities:
-      [
-        this.animalken, this.crafts, this.drive, this.etiquette, this.firearms,
-        this.larceny, this.melee, this.performance, this.stealth, this.survival, this.customskill
+      id: 1, category: "Fertigkeiten", priority: null,
+      abilities: [
+        this.larceny, this.etiquette, this.drive, this.crafts, this.stealth, this.melee,
+        this.firearms, this.animalken, this.survival, this.performance, this.customskill
       ]
     },
     {
-      id: 2, category: "knowledges", priority: null,
+      id: 2, category: "Kenntnisse", priority: null,
       abilities:
       [
-        this.academics, this.computer, this.finance, this.investigation,
-        this.law, this.medicine, this.occult, this.politics, this.science,
-        this.technology, this.customknowledge
+        this.academics, this.computer, this.finance, this.law,
+        this.medicine, this.investigation, this.science, this.occult,
+        this.politics, this.technology, this.customknowledge
       ]
     }];
 
@@ -189,13 +189,13 @@ app.service("AbilitiesService",
 
     function getPriorityPts(priority){
      switch(priority){
-       case "Primary":
+       case "Primär":
          return this.primaryPts;
          break;
-       case "Secondary":
+       case "Sekundär":
          return this.secondaryPts;
          break;
-       case "Tertiary":
+       case "Tertiär":
          return this.tertiaryPts;
          break;
        default:
@@ -264,13 +264,13 @@ app.service("AbilitiesService",
 
       //Change the total amount of points still available for that category.
       switch(priority){
-       case "Primary":
+       case "Primär":
          this.primaryPts += pointDiff;
          break;
-       case "Secondary":
+       case "Sekundär":
          this.secondaryPts += pointDiff;
          break;
-       case "Tertiary":
+       case "Tertiär":
          this.tertiaryPts += pointDiff;
          break;
        default:
@@ -297,22 +297,22 @@ app.service("AbilitiesService",
 
         });
         //Reset the point values.
-        if(prevPriority == "Primary"){
+        if(prevPriority == "Primär"){
           this.primaryPts = 13;
         }
-        if(prevPriority == "Secondary"){
+        if(prevPriority == "Sekundär"){
           this.secondaryPts  = 9;
         }
-        if(prevPriority == "Tertiary"){
+        if(prevPriority == "Tertiär"){
           this.tertiaryPts = 5;
         }
-        if(changedPriority == "Primary"){
+        if(changedPriority == "Primär"){
           this.primaryPts = 13;
         }
-        if(changedPriority == "Secondary"){
+        if(changedPriority == "Sekundär"){
           this.secondaryPts = 9;
         }
-        if(changedPriority == "Tertiary"){
+        if(changedPriority == "Tertiär"){
           this.tertiaryPts = 5;
         }
     };

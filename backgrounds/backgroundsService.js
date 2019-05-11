@@ -7,10 +7,11 @@ app.service("BackgroundsService", ['CharCreatorService',
    this.selectBackgroundPt = selectBackgroundPt;
    this.chooseBackground = chooseBackground;
 
-   this.backgroundList = ["", "Allies", "Alternate Identity", "Black Hand Memebership",
-                          "Contacts", "Domain", "Fame", "Generation",
-                          "Herd", "Influence", "Mentor", "Resources",
-                          "Retainers", "Rituals", "Status"];
+   this.backgroundList = ["", "Deckidentität", "Domäne", "Einfluss",
+                          "Gefolgsleute", "Generation", "Herde",
+                          "Kontakte", "Mentor", "Mitglied der schwarzen Hand",
+                           "Ressourcen", "Rituale", "Ruhm",
+                           "Status", "Verbündete"];
 
   function selectBackgroundPt(background, index){
     if(background.name == ""){

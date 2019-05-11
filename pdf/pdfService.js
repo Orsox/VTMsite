@@ -92,11 +92,11 @@ function($http, CharCreatorService, ClanService, AttributesService,
     doc.text(91.5, 41.8, CharCreatorService.charNature);
     doc.text(144.7, 41.8, ClanService.selectedClan.name);
     doc.text(34.1, 47.7, CharCreatorService.charPlayer);
-    doc.text(97.2, 47.7, CharCreatorService.charDemeanor);
-    doc.text(155.8, 47.7, CharCreatorService.charGeneration);
-    doc.text(39.4, 53.5, CharCreatorService.charChronicle);
+    doc.text(96.2, 47.7, CharCreatorService.charDemeanor);
+    doc.text(151.8, 47.7, CharCreatorService.charGeneration);
+    doc.text(36.2, 53.5, CharCreatorService.charChronicle);
     doc.text(93.2, 53.5, CharCreatorService.charConcept);
-    doc.text(144.1, 53.5, CharCreatorService.charSire);
+    doc.text(150.5, 53.5, CharCreatorService.charSire);
 
     var attrPosition = 59.74;
     var attrHeight = 71.52;

@@ -18,61 +18,65 @@ app.service("MeritFlawService", ['CharCreatorService',
  this.masterMeritList;
  this.masterFlawList;
 
- this.physicalMeritList = {"": 0, "Acute Sense (1pt)": 1, "Ambidextrous (2pt)": 1, "Bruiser (1pt)": 1, "Catlike Balance (1pt)": 1,
-                           "Early Riser (1pt)": 1, "Eat Food (1pt)": 1, "Friendly Face (1pt)": 1, "Blush of Health (2pt)": 2,
-                           "Enchanting Voice (2pt)": 2, "Daredevil (3pt)": 3, "Efficient Digestion (3pt)": 3, "Huge Size (4pt)": 4};
+ this.physicalMeritList = {"": 0, "Geschärfte Sinne (1pt)": 1, "Beidhändig (1pt)": 1, "Schläger (1pt)": 1, "Katzenhaftes Gleichgewicht (1pt)": 1,
+                           "Frühaufsteher (1pt)": 1, "Essen (1pt)": 1, "Freundliches Gesicht (1pt)": 1, "Rosiger Teint (2pt)": 2,
+                           "Bezauberne Stimme (2pt)": 2, "Draufgänger (3pt)": 3, "Wirksame Verdauung (3pt)": 3, "Riesenwuchs (4pt)": 4};
 
- this.physicalFlawList = {"": 0, "Hard of Hearing (1pt)": 1, "Short (1pt)": 1, "Smell of the Grave (1pt)": 1,
-                          "Tic/Twitch (1pt)": 1, "Bad Sight (1pt)": 1, "Bad Sight (3pt)": 3, "Fourteenth Generation (2pt)": 2,
-                          "Fifteenth Generation (4pt)": 4, "Disfigured (2pt)": 2, "Dulled Bite (2pt)": 2, "Infectious Bite (2pt)": 2,
-                          "One Eye (2pt)":2, "Vulnerability to Silver (2pt)": 2, "Open Wound (2pt)": 2, "Open Wound (4pt)": 4,
-                          "Addiction (3pt)": 3, "Child (3pt)": 3, "Deformity (3pt)": 3, "Glowing Eyes (3pt)": 3,
-                          "Lame (3pt)": 3, "Lazy (3pt)": 3, "Monstrous (3pt)": 3, "Permanent Fangs (3pt)": 3,
-                          "Permanent Wound (3pt)": 3, "Slow Healing (3pt)": 3, "Disease Carrier (4pt)": 4, "Deaf (4pt)": 4,
-                          "Mute (4pt)": 4, "Thin Blood (4pt)": 4, "Flesh of the Corpse (5pt)": 5, "Infertile Vitae (5pt)": 5,
-                          "Blind (6pt)": 6};
+ this.physicalFlawList = {"": 0, "Schwerhörigkeit (1pt)": 1, "Klein (1pt)": 1, "Grabgeruch (1pt)": 1,
+                          "Tic/Zucken (1pt)": 1, "Schlechtes Sehvermögen (1pt)": 1, "Schlechtes Sehvermögen (2pt)": 2,
+                          "Schlechtes Sehvermögen (3pt)": 3, "Vierzehnte Generation (2pt)": 2,
+                          "Fünfzehnte Generation (4pt)": 4, "Entstellt (2pt)": 2, "Stumpfer Biss (2pt)": 2, "Infektiöser Biss (2pt)": 2,
+                          "Einäugigkeit (2pt)":2, "Anfällig gegen Siber (2pt)": 2, "Offene Wunde (2pt)": 2,"Offene Wunde (3pt)": 3,
+                           "Offene Wunde (4pt)": 4,
+                          "Sucht (3pt)": 3, "Kind (3pt)": 3, "Missbildung (3pt)": 3, "Glühende Augen (3pt)": 3,
+                          "Lähmung (3pt)": 3, "Faul (3pt)": 3, "Monstrosität (3pt)": 3, "Dauerhafte Fangzähne (3pt)": 3,
+                          "Dauerhafte Wunde (3pt)": 3, "Langsame Heilung (3pt)": 3, "Krankheitsüberträger (4pt)": 4, "Taubheit (4pt)": 4,
+                          "Stummheit (4pt)": 4, "Anämie (4pt)": 4, "Leichenfleisch (5pt)": 5, "Unfruchtbare Vitae (5pt)": 5,
+                          "Blindheit (6pt)": 6};
 
- this.mentalMeritList = {"": 0, "Coldly Logical (1pt)": 1, "Common Sense (1pt)": 1, "Concentration (1pt)": 1,
-                         "Introspection (1pt)": 1, "Language (1pt)": 1, "Time Sense (1pt)": 1, "Useful Knowledge (1pt)": 1,
-                         "Code of Honor (2pt)": 2,"Computer Aptitude (2pt)": 2, "Eidetic Memory (2pt)": 2, "Light Sleeper (2pt)": 2,
-                         "Natural Linguist (2pt)": 2, "Calm Heart (3pt)": 3, "Iron Will (3pt)": 3, "Precocious (3pt)": 3};
+ this.mentalMeritList = {"": 0, "Eiskalte Logik (1pt)": 1, "Gesunder Menschenverstand (1pt)": 1, "Konzentration (1pt)": 1,
+                         "Innenschau (1pt)": 1, "Sprachen (1pt)": 1, "Zeitgefühl (1pt)": 1, "Nützliche Kenntnis (1pt)": 1,
+                         "Ehrenkodex (2pt)": 2,"Computerbegabung (2pt)": 2, "Fotografisches Gedächnis (2pt)": 2, "Leichter Schlaf (2pt)": 2,
+                         "Sprachtalent (2pt)": 2, "Ruhe (3pt)": 3, "Eiserner Wille (3pt)": 3, "Frühreif (3pt)": 3};
 
- this.mentalFlawList = {"": 0, "Deep Sleeper (1pt)": 1, "Impatient (1pt)": 1, "Nightmares (1pt)": 1,
-                        "Prey Exclusion (1pt)": 1, "Shy (1pt)": 1, "Soft-Hearted (1pt)": 1, "Speech Impediment (1pt)": 1,
-                        "Unconvinced (1pt)": 1, "Amnesia (2pt)": 2, "Lunacy (2pt)": 2, "Phobia (2pt)": 2,
-                        "Short Fuse (2pt)": 2, "Stereotype (2pt)": 2, "Territorial (2pt)": 2, "Thirst for Innocence (2pt)": 2,
-                        "Vengeful (2pt)": 2, "Victim of the Masquerade (2pt)": 2, "Weak-Willed (3pt)": 3, "Conspicuous Consumption (4pt)": 4,
-                        "Guilt-Wracked (4pt)": 4, "Flashbacks (6pt)": 6};
+ this.mentalFlawList = {"": 0, "Tiefer Schlaf (1pt)": 1, "Ungeduld (1pt)": 1, "Albträume (1pt)": 1,
+                        "Beuteausschluss (1pt)": 1, "Schüchternheit (1pt)": 1, "Sensibilität (1pt)": 1, "Sprachfehler (1pt)": 1,
+                        "Nicht überzeugt (1pt)": 1, "Amnesie (2pt)": 2, "Mondsüchtig (2pt)": 2, "Phobie (2pt)": 2,
+                        "Mangelnde Beherrschung (2pt)": 2, "Stereotyp (2pt)": 2, "Ortsgebunden (2pt)": 2, "Durst nach Unschuld (2pt)": 2,
+                        "Rache (2pt)": 2, "Opfer der Masquerade (2pt)": 2, "Schwacher Wille (3pt)": 3, "Gourmet (4pt)": 4,
+                        "Schuldbeladen (4pt)": 4, "Rückblenden (6pt)": 6};
 
- this.socialMeritList = {"": 0, "Elysium Regular (1pt)": 1, "Former Ghoul (1pt)": 1, "Harmless (1pt)": 1,
-                         "Natural Leader (1pt)": 1, "Prestigious Sire (1pt)": 1, "Protege (1pt)": 1, "Rep (1pt)": 1,
-                         "Sabbat Survivor (1pt)": 1, "Boon (1pt)": 1, "Boon (2pt)": 2, "Boon (3pt)": 3,"Boon (4pt)": 4, "Boon (5pt)": 5,
-                         "Boon (6pt)": 6, "Bullyboy (2pt)": 2, "Old Pal (2pt)": 2, "Lawman's Friend (2pt)": 2, "Open Road (2pt)": 2, "Sanctity (2pt)": 2,
-                         "Scholar of Enemies (2pt)": 2, "Scholar of Others (2pt)": 2, "Friend of the Underground (3pt)": 3, "Mole (3pt)": 3,
-                         "Rising Star (3pt)": 3, "Broken Bond (4pt)": 4, "Clan Friendship (4pt)": 4, "Primogen/Bishop Friendship (4pt)": 4};
+ this.socialMeritList = {"": 0, "Stammgast im Elysium (1pt)": 1, "Ehemaliger Ghoul (1pt)": 1, "Harmlos (1pt)": 1,
+                         "Führungstalent (1pt)": 1, "Angesehender Erzeuger (1pt)": 1, "Protege (1pt)": 1, "Ruf (1pt)": 1,
+                         "Überlebender des Sabbat (1pt)": 1, "Gefallen (1pt)": 1, "Gefallen (2pt)": 2, "Gefallen (3pt)": 3,"Gefallen (4pt)": 4,
+                         "Gefallen (5pt)": 5, "Gefallen (6pt)": 6, "Raufbold (2pt)": 2, "Alter Kumpel (2pt)": 2, "Freund des Vogts (2pt)": 2,
+                         "Freie Strasse (2pt)": 2, "Heiligkeit (2pt)": 2, "Scholar des Anderen (2pt)": 2, "Scholar der Feinde (2pt)": 2,
+                         "Freund des Untergrunds (3pt)": 3, "Maulwurf (3pt)": 3, "Aufgehender Stern (3pt)": 3, "Zerissendes Band (4pt)": 4,
+                          "Clan-Freundschaft (4pt)": 4, "Freundschaft mit Erstgeborenen/Bischöfen (4pt)": 4};
 
- this.socialFlawList = {"": 0, "Botched Presentation (1pt)": 1, "Dark Secret (1pt)": 1, "Expendable (1pt)": 1,
-                        "Incomplete Understanding (1pt)": 1, "Infamous Sire (1pt)": 1, "Mistaken Identity (1pt)": 1, "New Arrival (1pt)": 1,
-                        "New Kid (1pt)": 1, "Recruitment Target (1pt)": 1, "Sire's Resentment (1pt)": 1, "Special Responsibility (1pt)": 1,
-                        "Sympathizer (1pt)": 1, "Enemy (1pt)": 1, "Enemy (2pt)": 2, "Enemy (3pt)": 3,
-                        "Enemy (4pt)": 4, "Enemy (5pt)": 5, "Bound (2pt)": 2, "Catspaw (2pt)": 2,
-                        "Escaped Target (2pt)": 2, "Failure (2pt)": 2, "Masquerade Breaker (2pt)": 2, "Hunted (2pt)": 2,
-                        "Old Flame (2pt)": 2, "Rival Sires (2pt)": 2, "Uppity (2pt)": 2, "Disgrace to the Blood (3pt)": 3,
-                        "Former Prince (3pt)": 3, "Hunted Like a Dog (3pt)": 3, "Narc (3pt)": 3, "Sleeping With the Enemy (3pt)": 3,
-                        "Clan Enmity (4pt)": 4, "Loathsome Regnant (4pt)": 4, "Overextended (4pt)": 4, "Probationary Sect Member (4pt)": 4,
-                        "Blood Hunted (4pt)": 4, "Blood Hunted (6pt)": 6, "Laughingstock (5pt)": 5, "Red List (7pt)": 7};
+ this.socialFlawList = {"": 0, "Verpatzte Präsentation (1pt)": 1, "Dunkles Geheimnis (1pt)": 1, "Entbehrlich (1pt)": 1,
+                        "Unvollkommendes Verständnis (1pt)": 1, "Ablehnender Erzeuger (1pt)": 1, "Verwechslung (1pt)": 1, "Neuankömmling (1pt)": 1,
+                        "Nesthäkchen (1pt)": 1, "Rekrutierungsziel (1pt)": 1, "Berüchtigter Erzeuger (1pt)": 1, "Spezieller Verantwortungsbereich (1pt)": 1,
+                        "Sympathisant (1pt)": 1, "Feind (1pt)": 1, "Feind (2pt)": 2, "Feind (3pt)": 3,
+                        "Feind (4pt)": 4, "Feind (5pt)": 5, "Gebunden (2pt)": 2, "Handlanger (2pt)": 2,
+                        "Geflüchtetes Ziel (2pt)": 2, "Versager (2pt)": 2, "Bruch der Masquerade (2pt)": 2,
+                        "Alte Flamme (2pt)": 2, "Rivalisierender Erzeuger (2pt)": 2, "Hochnäsig (2pt)": 2, "Schande für das Blut (3pt)": 3,
+                        "ehemaliger Prinz (3pt)": 3, "Gehetzt wie ein Hund (3pt)": 3, "Schnüffler (3pt)": 3, "Mit dem feind schlafen (3pt)": 3,
+                        "Gejagd (4pt)": 4,
+                        "Clan-Feindschaft (4pt)": 4, "Abscheulicher Herrscher (4pt)": 4, "Sich Übernehmen (4pt)": 4, "Sektenmitglied auf Probe (4pt)": 4,
+                        "Blutjagd (4pt)": 4, "Blutjagd (6pt)": 6, "Zielscheibe des Spotts (5pt)": 5, "Rote Liste (7pt)": 7};
 
- this.supernaturalMeritList = {"": 0, "Deceptive Aura (1pt)": 1, "Healing Touch (1pt)": 1, "Inoffensive to Animals (1pt)": 1,
-                               "Medium (2pt)": 2, "Magic Resistance (2pt)": 2, "Hidden Diablerie (3pt)": 3, "Lucky (3pt)": 3,
-                               "Oracular Ability (3pt)": 3, "Spirit Mentor (3pt)": 3, "True Love (4pt)": 4, "Additional Discipline (5pt)": 5,
-                               "Unbondable (5pt)": 5, "Nine Lives (6pt)": 6, "True Faith (7pt)": 7};
+ this.supernaturalMeritList = {"": 0, "Täuschende Aura (1pt)": 1, "Heilende Berührung (1pt)": 1, "Harmlos für Tiere (1pt)": 1,
+                               "Medium (2pt)": 2, "Magieresistenz (2pt)": 2, "Verborgene Diablerie (3pt)": 3, "Glück (3pt)": 3,
+                               "Orakel (3pt)": 3, "Geister Mentor (3pt)": 3, "Wahre Liebe (4pt)": 4, "Zusätzliche Disziplin (5pt)": 5,
+                               "Immun gegen Blutsbande (5pt)": 5, "Neun Leben (6pt)": 6, "Wahrer Glaube (7pt)": 7};
 
- this.supernaturalFlawList = {"": 0, "Cast No Reflection (1pt)": 1, "Cold Breeze (1pt)": 1, "Repulsed by Garlic (1pt)": 1,
-                              "Touch of Frost (1pt)": 1, "Cursed (1pt)": 1, "Cursed (2pt)": 2, "Cursed (3pt)": 3,
-                              "Cursed (4pt)": 4, "Cursed (5pt)": 5, "Beacon of the Unholy (2pt)": 2, "Deathsight (2pt)": 2,
-                              "Eerie Presence (2pt)": 2, "Lord of the Flies (2pt)": 2, "Can't Cross Running Water (3pt)": 3,
-                              "Haunted (3pt)": 3, "Repelled by Crosses (3pt)": 3, "Grip of the Damned (4pt)": 4, "Dark Fate (5pt)": 5,
-                              "Light-Sensitive (5pt)": 5};
+ this.supernaturalFlawList = {"": 0, "Kein Spiegelbild (1pt)": 1, "Kalte Brise (1pt)": 1, "Abgestoßen durch Knoblauch (1pt)": 1,
+                              "Frostige Berührung (1pt)": 1, "Verflucht (1pt)": 1, "Verflucht (2pt)": 2, "Verflucht (3pt)": 3,
+                              "Verflucht (4pt)": 4, "Verflucht (5pt)": 5, "Leuchtfeuer des Gottlosen (2pt)": 2, "Todessicht (2pt)": 2,
+                              "Eerie Presence (2pt)": 2, "Lord of the Flies (2pt)": 2, "Kann kein fließendes Wasser überqueren (3pt)": 3,
+                              "Spuk (3pt)": 3, "Angst for Kreuzen (3pt)": 3, "Griff der Verdammten (4pt)": 4, "Dunkles Schicksal (5pt)": 5,
+                              "Lichtempfindlich (5pt)": 5};
 
 this.clansMeritList = {"": 0, "Sectarian Ally (1pt)": 1, "Thousand Meter Killer (1pt)": 1,
                               "Fury's Focus (3pt, Prerequisite: Path of Entelechy)": 3, "Dynamic Personality (5pt)": 5,
@@ -115,7 +119,7 @@ this.clansFlawList = {"": 0, "Outcast (2pt)": 2, "Broken Antitribu (3pt)": 3, "M
                              "Stigmata (4pt)": 4, "Infectious (3pt)": 3, "Overstimulated (3pt)": 3, "Dead Inside (4pt)": 4,
                              "Stench (1pt)": 1, "Dangerous Secret (1pt)": 1, "Dangerous Secret (2pt)": 2, "Dangerous Secret (3pt)": 3,
                              "Dangerous Secret (4pt)": 4, "Dangerous Secret (5pt)": 5, "Anosmia (2pt)": 2, "Parasitic Infestation (2pt)": 2,
-                             "Bestial (3pt)": 3, "Enemy Brood (3pt)": 3, "Putrescent (4pt)": 4, "Contagious (5pt)": 5, "Incoherent (5pt)": 5,
+                             "Bestial (3pt)": 3, "Feind Brood (3pt)": 3, "Putrescent (4pt)": 4, "Contagious (5pt)": 5, "Incoherent (5pt)": 5,
                              "Chandala (1pt)": 1, "Flawed Reality (2pt)": 2, "Oathbreaker (2pt)": 2, "Lost Svadharma (3pt)": 3,
                              "Tortured Artist (1pt)": 1, "Private Life (3pt)": 3, "Arcane Curse (1pt)": 1, "Arcane Curse (2pt)": 2,
                              "Arcane Curse (3pt)": 3, "Arcane Curse (4pt)": 4, "Arcane Curse (5pt)": 5, "Cloistered (2pt)": 2,

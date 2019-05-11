@@ -77,12 +77,12 @@ app.service("VirtuesService",
     constructor(name){
       this.name = name;
       if(name == "Conscience")
-        this.displayName = "Conscience/Conviction";
+        this.displayName = "Gewissen/Überzeugung";
       else{
         if(name == "Self-control")
-          this.displayName = "Self-Control/Instinct"
+          this.displayName = "Selbstbeherrschung/Instinkt"
         else
-          this.displayName = name;
+          this.displayName = "Mut";
         }
       this.pointCount = 1;
       this.points = [{id:0, img:"./full.png", type: "original"},
