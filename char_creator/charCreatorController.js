@@ -108,20 +108,20 @@ app.controller("CharCreatorController",
    this.maxFreePts = 22;
    this.maxFlawBonus = 7;
 
-   this.natureDemeanorList = ["Architekt", "Autokrat", "Bon Vivant",
-                              "Bravo", "Capitalist", "Caregiver",
-                              "Celebrant", "Chameleon", "Child",
-                              "Competitor", "Conformist", "Conniver",
-                              "Creep Show", "Curmudgeon", "Dabbler",
-                              "Deviant", "Director", "Enigma",
-                              "Eye of the Storm", "Fanatic", "Gallant",
-                              "Guru", "Idealist", "Judge",
-                              "Loner", "Martyr", "Masochist",
-                              "Monster", "Pedagogue", "Penitent",
-                              "Perfectionist", "Rebel", "Rogue",
-                              "Sadist", "Scientist", "Sociopath",
-                              "Soldier", "Survivor", "Thrill-Seeker",
-                              "Traditionalist", "Trickster", "Visionary"];
+   this.natureDemeanorList = ["Architekt", "Autokrat", "Bonvivant",
+                              "Rauhbein", "Kapitalist", "Helfer",
+                              "Zelebrant", "Chameleon", "Kind",
+                              "Wettkämpfer", "Konformist", "Schmarotzer",
+                              "Gruselkabinett", "Griesgram", "Dilettant",
+                              "Abweichler", "Direktor", "Rätsel",
+                              "Auge des Sturms", "Fanatiker", "Gigolo",
+                              "Guru", "Idealist", "Richter",
+                              "Einzelgänger", "Märtyrer", "Masochist",
+                              "Monster", "Pädagoge", "Büßer",
+                              "Perfektionist", "Rebell", "Schurke",
+                              "Sadist", "Wissenschaftler", "Soziopath",
+                              "Soldat", "Überlebenskünstler", "Sensationsjunkie",
+                              "Traditionalist", "Trickser", "Visionär"];
 
    var self = this;
    $scope.$on('loadCharacter', function(){
